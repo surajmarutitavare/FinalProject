@@ -14,4 +14,5 @@ public class SearchHospitalTest extends BaseTest {
         searchPage.searchHospital();
     }
 
+
 }
