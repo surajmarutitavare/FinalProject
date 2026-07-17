@@ -81,4 +81,5 @@ public class PractoTest extends BaseTest {
 
         System.out.println("========== Test Suite Completed ==========");
     }
+
 }
