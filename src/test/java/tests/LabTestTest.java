@@ -12,5 +12,7 @@ public class LabTestTest extends BaseTest {
         LabTestPage labTestPage = new LabTestPage(driver);
 
         labTestPage.topCities();
+
+
     }
 }
