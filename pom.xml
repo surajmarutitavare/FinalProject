@@ -33,6 +33,7 @@
             <scope>test</scope>
         </dependency>
 
+<<<<<<< HEAD
         <!-- Source: https://mvnrepository.com/artifact/com.aventstack/extentreports -->
         <dependency>
             <groupId>com.aventstack</groupId>
@@ -45,6 +46,15 @@
 
 
 
+=======
+        <!-- Apache POI -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>5.5.1</version>
+            <scope>compile</scope>
+        </dependency>
+>>>>>>> 394174d (excel utility added)
     </dependencies>
 
 </project>

@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import reports.ExtentTestManager;
+import utils.ExcelUtility;
 import utils.ScreenshotUtils;
 
 import java.time.Duration;
@@ -15,6 +15,9 @@ import java.util.Set;
 
 public class SearchPage {
     WebDriver driver;
+    static List<String> ratingsList = new ArrayList<>();
+    static List<String> open24x7List = new ArrayList<>();
+    static List<String> parkingList = new ArrayList<>();
 
     public SearchPage(WebDriver driver) {
         this.driver = driver;
@@ -44,32 +47,27 @@ public class SearchPage {
 
             String mainWindow = driver.getWindowHandle();
             Set<String> windows = driver.getWindowHandles();
-//            System.out.println("main window-->" + mainWindow);
             for (String i : windows) {
-//                System.out.println("new tab-->" + i);
                 if (!mainWindow.equals(i)) driver.switchTo().window(i);
             }
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 
             WebElement hospitalName = driver.findElement(hospitalNameElement);
             String hospitalNameText = hospitalName.getText();
-            ExtentTestManager.test.info(
-                    "Checking Hospital : "
-                            + hospitalNameText
-            );
+
 
             WebElement rating = wait.until(ExpectedConditions.visibilityOfElementLocated(ratingElement));
-            float ratingValue = Float.parseFloat(rating.getText());
-            System.out.println("rating -->" + rating.getText());
-            ExtentTestManager.test.pass(
-                    "Rating >= 3.5 : "
-                            + ratingValue
-            );
+            String ratingText = rating.getText();
+            float ratingValue = Float.parseFloat(ratingText);
+            System.out.println("rating -->" + ratingText);
+
 
             /// rating
             if (ratingValue >= 3.5) {
                 isRating = true;
+                ratingsList.add(ratingText);
                 System.out.println("Hospital Rating above 3.5 --> " + hospitalNameText);
+
             }
 
             ///  24 x 7 Availability
@@ -77,12 +75,9 @@ public class SearchPage {
             String hospitalTimingText = hospitalTiming.getText();
             System.out.println(hospitalTimingText);
 
-
             if (hospitalTimingText.equals("Open 24 x 7")) {
                 isAvailable = true;
-                ExtentTestManager.test.pass(
-                        "Hospital Available 24 x 7"
-                );
+                open24x7List.add(hospitalTimingText);
                 System.out.println("Hospital Hospital available 24x7--> " + hospitalNameText);
             }
 
@@ -94,9 +89,7 @@ public class SearchPage {
             for (WebElement i : amenities) {
                 if (i.getText().equals("Parking")) {
                     isParking = true;
-                    ExtentTestManager.test.pass(
-                            "Parking Facility Available"
-                    );
+                    parkingList.add(i.getText());
                     System.out.println(i.getText());
                     break;
                 }
@@ -109,8 +102,6 @@ public class SearchPage {
             return isRating && isAvailable && isParking;
         } catch (Exception e) {
             System.out.println("Error in checking facilities-->" + e.getMessage());
-            ExtentTestManager.test.fail(
-                    e.getMessage());
             return isRating && isAvailable && isParking;
         }
 
@@ -125,30 +116,17 @@ public class SearchPage {
         location.sendKeys("a");
         location.sendKeys("n");
         location.sendKeys("g");
-        ExtentTestManager.test.info(
-                "Selecting Bangalore Location");
+
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         WebElement bangalore = wait.until(ExpectedConditions.visibilityOfElementLocated(bangaloreCityElement));
         bangalore.click();
 
-
-        ExtentTestManager.test.pass(
-                "Bangalore Selected");
-
-
-
         WebElement search = driver.findElement(searchHospitalFieldElement);
         search.clear();
-
         search.sendKeys("Hospital");
-        ExtentTestManager.test.info(
-                "Searching Hospitals");
         WebElement hospital = wait.until(ExpectedConditions.visibilityOfElementLocated(selectHospitalElement));
         hospital.click();
-        ExtentTestManager.test.info(
-                "Hospital Search Started"
-        );
 
 
         List<WebElement> hospitalList = driver.findElements(hospitalListElement);
@@ -163,17 +141,18 @@ public class SearchPage {
             }
         }
 
+        for (int i = 0; i < hospitalWithFeatured.size(); i++) {
+            WebElement hospitalNew = hospitalWithFeatured.get(i).findElement(hospitalElement);
+            String text = hospitalNew.getText();
+            System.out.println("Hospital with Featured -->" + text);
+
+            ExcelUtility.setCellData(i + 1, 0, text);
+            ExcelUtility.setCellData(i + 1, 1, ratingsList.get(i)+ " ★ ");
+            ExcelUtility.setCellData(i + 1, 2, parkingList.get(i)+ " Available ");
+            ExcelUtility.setCellData(i + 1, 3, open24x7List.get(i));
+
+        }
         System.out.println("hospital With Featured " + hospitalWithFeatured.size());
-        ExtentTestManager.test.info(
-                "Total Hospitals Found : "
-                        + hospitalList.size());
-
-        ExtentTestManager.test.info(
-                "Hospital With Featured Found : "
-                        + hospitalWithFeatured.size());
-
-        System.out.println("hospital With Featured "
-                + hospitalWithFeatured.size());
 //        driver.navigate().back();
     }
 }
