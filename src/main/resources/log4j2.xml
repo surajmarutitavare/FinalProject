@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration packages="org.apache.logging.log4j.core">
+
+    <!-- Define Appenders -->
+    <Appenders>
+
+        <!-- Console Appender - For Real-time Test Execution Logs -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout
+                    pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5p %c{1} - %msg%n" />
+        </Console>
+
+        <!-- File Appender - All Logs -->
+        <File name="FileAppender" fileName="logs/application.log" append="true">
+            <PatternLayout
+                    pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5p %c{1} - %msg%n" />
+        </File>
+
+        <!-- Rolling File Appender - Test Execution Logs -->
+        <RollingFile name="RollingFileAppender"
+                     fileName="logs/test-execution.log"
+                     filePattern="logs/test-execution-%d{yyyy-MM-dd}-%i.log.gz">
+            <PatternLayout
+                    pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5p %c{1} - %msg%n" />
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true" />
+                <SizeBasedTriggeringPolicy size="10MB" />
+            </Policies>
+            <DefaultRolloverStrategy max="10" />
+        </RollingFile>
+
+        <!-- Selenium WebDriver Logs -->
+        <RollingFile name="SeleniumAppender"
+                     fileName="logs/selenium-debug.log"
+                     filePattern="logs/selenium-debug-%d{yyyy-MM-dd}-%i.log">
+            <PatternLayout
+                    pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5p %c{1} - %msg%n" />
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true" />
+                <SizeBasedTriggeringPolicy size="5MB" />
+            </Policies>
+        </RollingFile>
+
+        <!-- Error Logs Only -->
+        <File name="ErrorFileAppender" fileName="logs/errors.log" append="true">
+            <ThresholdFilter level="ERROR" onMatch="ACCEPT" onMismatch="DENY" />
+            <PatternLayout
+                    pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5p %c{1}:%L - %msg%n%xEx" />
+        </File>
+
+    </Appenders>
+
+    <!-- Define Loggers -->
+    <Loggers>
+
+        <!-- Selenium WebDriver Logger -->
+        <Logger name="org.openqa.selenium" level="INFO" additivity="false">
+            <AppenderRef ref="SeleniumAppender" />
+            <AppenderRef ref="Console" />
+        </Logger>
+
+        <!-- TestNG Logger -->
+        <Logger name="org.testng" level="INFO" additivity="false">
+            <AppenderRef ref="FileAppender" />
+            <AppenderRef ref="Console" />
+        </Logger>
+
+        <!-- Your Application Packages -->
+        <Logger name="utils" level="DEBUG" additivity="false">
+            <AppenderRef ref="RollingFileAppender" />
+            <AppenderRef ref="Console" />
+        </Logger>
+
+        <Logger name="pages" level="DEBUG" additivity="false">
+            <AppenderRef ref="RollingFileAppender" />
+            <AppenderRef ref="Console" />
+        </Logger>
+
+        <Logger name="tests" level="DEBUG" additivity="false">
+            <AppenderRef ref="RollingFileAppender" />
+            <AppenderRef ref="Console" />
+        </Logger>
+
+        <!-- Root Logger - Catches Everything -->
+        <Root level="INFO">
+            <AppenderRef ref="Console" />
+            <AppenderRef ref="FileAppender" />
+            <AppenderRef ref="ErrorFileAppender" />
+        </Root>
+
+    </Loggers>
+
+</Configuration>

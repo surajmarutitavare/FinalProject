@@ -6,15 +6,19 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import utils.ScreenshotUtils;
 
 import java.time.Duration;
 
 public class CorporateWellness {
     WebDriver driver;
+    private static final Logger logger = LogManager.getLogger(CorporateWellness.class);
 
     public CorporateWellness(WebDriver driver) {
         this.driver = driver;
+        logger.info("CorporateWellness page object initialized");
     }
 
     By corporateElement = By.xpath("//div[@class='nav-right text-right']/descendant::span[contains(text(),'For Corporates')]");
@@ -29,91 +33,110 @@ public class CorporateWellness {
 
 
     public boolean isPhoneValidationDisplayed() {
+        try {
+            logger.debug("Checking phone validation error");
+            WebElement contactNumberField =
+                    driver.findElement(contactNumberElement);
 
-        WebElement contactNumberField =
-                driver.findElement(contactNumberElement);
+            String classValue =
+                    contactNumberField.getAttribute("class");
 
-        String classValue =
-                contactNumberField.getAttribute("class");
-
-        return classValue.contains("error");
+            boolean isPhoneError = classValue.contains("error");
+            if (isPhoneError) {
+                logger.info("Phone validation error is displayed");
+            } else {
+                logger.warn("Phone validation error is not displayed");
+            }
+            return isPhoneError;
+        } catch (Exception e) {
+            logger.error("Error checking phone validation: " + e.getMessage(), e);
+            return false;
+        }
     }
 
     public boolean isEmailValidationDisplayed() {
+        try {
+            logger.debug("Checking email validation error");
+            WebElement emailField =
+                    driver.findElement(officialEmailIdElement);
 
-        WebElement emailField =
-                driver.findElement(officialEmailIdElement);
+            String classValue =
+                    emailField.getAttribute("class");
 
-        String classValue =
-                emailField.getAttribute("class");
-
-        return classValue.contains("error");
+            boolean isEmailError = classValue.contains("error");
+            if (isEmailError) {
+                logger.info("Email validation error is displayed");
+            } else {
+                logger.warn("Email validation error is not displayed");
+            }
+            return isEmailError;
+        } catch (Exception e) {
+            logger.error("Error checking email validation: " + e.getMessage(), e);
+            return false;
+        }
     }
 
 
 
 
     public void formDetails() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        try {
+            logger.info("Starting Corporate Wellness form submission");
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 
-        WebElement corporate = wait.until(ExpectedConditions.visibilityOfElementLocated(corporateElement));
-        corporate.click();
+            logger.debug("Clicking on 'For Corporates' element");
+            WebElement corporate = wait.until(ExpectedConditions.visibilityOfElementLocated(corporateElement));
+            corporate.click();
+            logger.info("Successfully clicked 'For Corporates'");
 
+            logger.debug("Clicking on 'Health & Wellness Plans' link");
+            WebElement corporateWellness = driver.findElement(corporateWellnessElement);
+            corporateWellness.click();
+            logger.info("Successfully clicked 'Health & Wellness Plans'");
 
-        WebElement corporateWellness = driver.findElement(corporateWellnessElement);
-        corporateWellness.click();
+            logger.debug("Entering name: Mrunmayee");
+            WebElement name = wait.until(ExpectedConditions.visibilityOfElementLocated(nameElement));
+            name.click();
+            name.sendKeys("Mrunmayee");
+            logger.info("Name field filled successfully");
 
+            logger.debug("Entering organization name: Cognizant");
+            WebElement organizationName = driver.findElement(organizationNameElement);
+            organizationName.sendKeys("Cognizant");
+            logger.info("Organization name filled successfully");
 
-        WebElement name = wait.until(ExpectedConditions.visibilityOfElementLocated(nameElement));
-        name.click();
-        name.sendKeys("Mrunmayee");
+            logger.debug("Entering contact number: 90876534231");
+            WebElement contactNumber = driver.findElement(contactNumberElement);
+            contactNumber.sendKeys("90876534231");
+            logger.info("Contact number filled successfully");
 
-        WebElement organizationName = driver.findElement(organizationNameElement);
-        organizationName.sendKeys("Cognizant");
+            logger.debug("Entering official email: xyz@gmail.");
+            WebElement officialEmailId = driver.findElement(officialEmailIdElement);
+            officialEmailId.sendKeys("xyz@gmail.");
+            logger.info("Email field filled successfully");
 
-        WebElement contactNumber = driver.findElement(contactNumberElement);
-        contactNumber.sendKeys("90876534231");
-//        String contactNumber1ClassAttribute = contactNumber1.getAttribute("class");
-//        System.out.println(contactNumber1ClassAttribute);
+            logger.debug("Selecting organization size (index 2)");
+            WebElement organizationSize = driver.findElement(organizationSizeElemet);
+            organizationSize.click();
+            Select select = new Select(organizationSize);
+            select.selectByIndex(2);
+            logger.info("Organization size selected successfully");
 
-//        WebElement contactNumber2 = driver.findElement(contactNumber);
-//        String contactNumber2ClassAttribute = contactNumber2.getAttribute("class");
-//        System.out.println(contactNumber2ClassAttribute);
+            logger.debug("Selecting interested in: Taking a demo");
+            WebElement interestedInButton = driver.findElement(interestedInButtonElement);
+            interestedInButton.click();
+            Select select1 = new Select(interestedInButton);
+            select1.selectByVisibleText("Taking a demo");
+            logger.info("'Interested In' dropdown selected successfully");
 
+            logger.debug("Clicking 'Schedule a demo' button");
+            WebElement scheduleDemo = driver.findElement(scheduleDemoElement);
+            scheduleDemo.click();
+            logger.info("'Schedule a demo' button clicked successfully - Form submission completed");
 
-//        if (contactNumber2ClassAttribute != null && contactNumber2ClassAttribute.contains("error")) {
-//            System.out.println("Test Passed ✅✅✅");
-//        }
-
-        WebElement officialEmailId = driver.findElement(officialEmailIdElement);
-//        String officialEmailId1ClassAttribute = officialEmailId1.getAttribute("class");
-//        System.out.println(officialEmailId1ClassAttribute);
-        officialEmailId.sendKeys("xyz@gmail.");
-
-//        WebElement officialEmailId2 = driver.findElement(officialEmailIdElement);
-//        String officialEmailId2ClassAttribute = officialEmailId2.getAttribute("class");
-//        System.out.println(officialEmailId2ClassAttribute);
-//
-//        if (officialEmailId2ClassAttribute != null && officialEmailId2ClassAttribute.contains("error")) {
-//            System.out.println("Test Passed ✅✅✅");
-//        }
-
-
-        WebElement organizationSize = driver.findElement(organizationSizeElemet);
-        organizationSize.click();
-        Select select = new Select(organizationSize);
-        select.selectByIndex(2);
-
-        WebElement interestedInButton = driver.findElement(interestedInButtonElement);
-        interestedInButton.click();
-        Select select1 = new Select(interestedInButton);
-        select1.selectByVisibleText("Taking a demo");
-
-//        ScreenshotUtils.captureScreenshot(driver);
-
-        WebElement scheduleDemo = driver.findElement(scheduleDemoElement);
-        scheduleDemo.click();
-
-
+        } catch (Exception e) {
+            logger.error("Error during form submission: " + e.getMessage(), e);
+            throw new RuntimeException("Form submission failed", e);
+        }
     }
 }
