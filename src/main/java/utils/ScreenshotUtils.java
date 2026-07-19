@@ -11,6 +11,8 @@ import java.util.Date;
 
 public class ScreenshotUtils {
 
+
+
     // Method to capture screenshot and return file path
     public static String captureScreenshot(WebDriver driver, String testName) {
 
