@@ -130,19 +130,20 @@ public class SearchPage {
             logger.error("Error while checking facilities", e);
             return false;
 
-        } finally {
-
-            try {
-                if (driver.getWindowHandles().size() > 1) {
-                    driver.close();
-                    driver.switchTo().window(mainWindow);
-                }
-            } catch (Exception ex) {
-                logger.error("Error while switching back to main window", ex);
-            }
-
-            logger.info("------------------------------------------------------");
         }
+//        finally {
+//
+//            try {
+//                if (driver.getWindowHandles().size() > 1) {
+//                    driver.close();
+//                    driver.switchTo().window(mainWindow);
+//                }
+//            } catch (Exception ex) {
+//                logger.error("Error while switching back to main window", ex);
+//            }
+//
+//            logger.info("------------------------------------------------------");
+//        }
     }
 
     public void searchHospital() {

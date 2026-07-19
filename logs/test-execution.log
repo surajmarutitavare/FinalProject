@@ -983,3 +983,1594 @@ Session ID: 4827d66f590bd6c8f04b1f4b13d95d96
 2026-07-18 21:53:51.286 [main] INFO  SearchPage - ------------------------------------------------------
 2026-07-18 21:53:51.286 [main] INFO  SearchPage - Hospitals matching all criteria: 8
 2026-07-18 21:53:51.287 [main] INFO  SearchPage - Hospital Search Completed
+2026-07-19 16:33:32.339 [main] INFO  SearchPage - Starting Hospital Search
+2026-07-19 16:33:45.148 [main] INFO  LabTestPage - LabTestPage page object initialized
+2026-07-19 16:33:45.150 [main] INFO  LabTestPage - Starting to fetch top cities for Lab Tests
+2026-07-19 16:33:45.150 [main] DEBUG LabTestPage - Clicking on 'Lab Tests' element
+2026-07-19 16:33:45.227 [main] ERROR LabTestPage - Error while fetching top cities: no such element: Unable to locate element: {"method":"xpath","selector":"//a/child::div[contains(text(),'Lab Tests')]"}
+  (Session info: chrome=149.0.7827.103)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [914bce76509c276d41a4932e69d46a3a, findElement {using=xpath, value=//a/child::div[contains(text(),'Lab Tests')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2505042\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50822}, goog:processID: 12108, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50822/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 914bce76509c276d41a4932e69d46a3a
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a/child::div[contains(text(),'Lab Tests')]"}
+  (Session info: chrome=149.0.7827.103)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [914bce76509c276d41a4932e69d46a3a, findElement {using=xpath, value=//a/child::div[contains(text(),'Lab Tests')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2505042\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50822}, goog:processID: 12108, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50822/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 914bce76509c276d41a4932e69d46a3a
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:143) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:224) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:217) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:173) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:421) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:415) ~[selenium-remote-driver-4.44.0.jar:?]
+	at pages.LabTestPage.topCities(LabTestPage.java:29) ~[classes/:?]
+	at tests.PractoTest.verifyTopCities(PractoTest.java:48) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.12.0.jar:7.12.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:744) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.12.0.jar:7.12.0]
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65) [testng-rt.jar:?]
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105) [testng-rt.jar:?]
+2026-07-19 16:33:54.187 [main] INFO  CorporateWellness - CorporateWellness page object initialized
+2026-07-19 16:33:54.189 [main] INFO  CorporateWellness - Starting Corporate Wellness form submission
+2026-07-19 16:33:54.195 [main] DEBUG CorporateWellness - Clicking on 'For Corporates' element
+2026-07-19 16:34:25.278 [main] INFO  CorporateWellness - Successfully clicked 'For Corporates'
+2026-07-19 16:34:25.279 [main] DEBUG CorporateWellness - Clicking on 'Health & Wellness Plans' link
+2026-07-19 16:34:35.473 [main] INFO  CorporateWellness - Successfully clicked 'Health & Wellness Plans'
+2026-07-19 16:34:35.473 [main] DEBUG CorporateWellness - Entering name: Mrunmayee
+2026-07-19 16:34:36.015 [main] INFO  CorporateWellness - Name field filled successfully
+2026-07-19 16:34:36.015 [main] DEBUG CorporateWellness - Entering organization name: Cognizant
+2026-07-19 16:34:36.296 [main] INFO  CorporateWellness - Organization name filled successfully
+2026-07-19 16:34:36.297 [main] DEBUG CorporateWellness - Entering contact number: 90876534231
+2026-07-19 16:34:36.552 [main] INFO  CorporateWellness - Contact number filled successfully
+2026-07-19 16:34:36.553 [main] DEBUG CorporateWellness - Entering official email: xyz@gmail.
+2026-07-19 16:34:36.802 [main] INFO  CorporateWellness - Email field filled successfully
+2026-07-19 16:34:36.802 [main] DEBUG CorporateWellness - Selecting organization size (index 2)
+2026-07-19 16:34:37.435 [main] INFO  CorporateWellness - Organization size selected successfully
+2026-07-19 16:34:37.435 [main] DEBUG CorporateWellness - Selecting interested in: Taking a demo
+2026-07-19 16:34:38.075 [main] INFO  CorporateWellness - 'Interested In' dropdown selected successfully
+2026-07-19 16:34:38.076 [main] DEBUG CorporateWellness - Clicking 'Schedule a demo' button
+2026-07-19 16:34:38.289 [main] INFO  CorporateWellness - 'Schedule a demo' button clicked successfully - Form submission completed
+2026-07-19 16:34:38.290 [main] DEBUG CorporateWellness - Checking phone validation error
+2026-07-19 16:34:38.342 [main] INFO  CorporateWellness - Phone validation error is displayed
+2026-07-19 16:34:38.346 [main] DEBUG CorporateWellness - Checking email validation error
+2026-07-19 16:34:38.387 [main] INFO  CorporateWellness - Email validation error is displayed
+2026-07-19 16:35:08.364 [main] INFO  SearchPage - Starting Hospital Search
+2026-07-19 16:35:08.754 [main] INFO  SearchPage - Entered location: Bangalore
+2026-07-19 16:35:09.615 [main] INFO  SearchPage - Selected Bangalore from suggestions
+2026-07-19 16:35:09.864 [main] INFO  SearchPage - Searching hospitals
+2026-07-19 16:35:22.421 [main] INFO  SearchPage - Hospital option selected
+2026-07-19 16:35:22.526 [main] INFO  SearchPage - Total hospitals found: 10
+2026-07-19 16:35:22.613 [main] INFO  SearchPage - Checking hospital: Manipal Hospital Varthur Road (formerly Columbia Asia Hospital)
+2026-07-19 16:35:27.459 [main] INFO  SearchPage - Opened hospital profile: Manipal Hospital Varthur Road (formerly Columbia Asia Hospital), Whitefield
+2026-07-19 16:35:27.544 [main] INFO  SearchPage - Hospital Rating: 4.0
+2026-07-19 16:35:27.544 [main] INFO  SearchPage - Rating criteria passed for Manipal Hospital Varthur Road (formerly Columbia Asia Hospital), Whitefield
+2026-07-19 16:35:27.650 [main] INFO  SearchPage - Hospital Timing: Open 24 x 7
+2026-07-19 16:35:27.650 [main] INFO  SearchPage - 24x7 availability criteria passed for Manipal Hospital Varthur Road (formerly Columbia Asia Hospital), Whitefield
+2026-07-19 16:35:28.000 [main] INFO  SearchPage - Clicked Read More Info button
+2026-07-19 16:35:28.060 [main] DEBUG SearchPage - Amenity Found: Bloodbank
+2026-07-19 16:35:28.118 [main] DEBUG SearchPage - Amenity Found: Emergency Service
+2026-07-19 16:35:28.178 [main] DEBUG SearchPage - Amenity Found: 24X7 Pharmacy
+2026-07-19 16:35:28.250 [main] DEBUG SearchPage - Amenity Found: Cafeteria
+2026-07-19 16:35:28.312 [main] DEBUG SearchPage - Amenity Found: Bank/ATM
+2026-07-19 16:35:28.353 [main] DEBUG SearchPage - Amenity Found: Parking
+2026-07-19 16:35:28.371 [main] INFO  SearchPage - Parking facility available
+2026-07-19 16:35:28.371 [main] INFO  SearchPage - Verification Result -> Rating: true, Availability: true, Parking: true
+2026-07-19 16:35:28.452 [main] INFO  SearchPage - ------------------------------------------------------
+2026-07-19 16:35:28.452 [main] INFO  SearchPage - Hospital added to filtered list
+2026-07-19 16:35:28.505 [main] INFO  SearchPage - Checking hospital: Manipal Hospitals
+2026-07-19 16:35:59.054 [main] ERROR SearchPage - Error while checking facilities
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.xpath: //h1[@class='c-profile__title']/child::span
+(tried for 30 seconds with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85) ~[selenium-support-4.44.0.jar:?]
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234) ~[selenium-support-4.44.0.jar:?]
+	at pages.SearchPage.checkFacilities(SearchPage.java:70) ~[classes/:?]
+	at pages.SearchPage.searchHospital(SearchPage.java:192) ~[classes/:?]
+	at tests.PractoTest.verifyHospitalSearch(PractoTest.java:38) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.12.0.jar:7.12.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:744) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.12.0.jar:7.12.0]
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65) [testng-rt.jar:?]
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105) [testng-rt.jar:?]
+Caused by: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=149.0.7827.103)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f333d1a80508fd965f9988a28d055073, findElement {value=//h1[@class='c-profile__title']/child::span, using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2505042\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54049}, goog:processID: 18756, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54049/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f333d1a80508fd965f9988a28d055073
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:143) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:224) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:217) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:173) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:421) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:415) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:222) ~[selenium-support-4.44.0.jar:?]
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:215) ~[selenium-support-4.44.0.jar:?]
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:210) ~[selenium-support-4.44.0.jar:?]
+	... 28 more
+2026-07-19 16:35:59.078 [main] ERROR SearchPage - Error while switching back to main window
+org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=149.0.7827.103)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f333d1a80508fd965f9988a28d055073, close {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2505042\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54049}, goog:processID: 18756, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54049/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f333d1a80508fd965f9988a28d055073
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:143) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:224) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:217) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:682) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:686) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:471) ~[selenium-remote-driver-4.44.0.jar:?]
+	at pages.SearchPage.checkFacilities(SearchPage.java:137) ~[classes/:?]
+	at pages.SearchPage.searchHospital(SearchPage.java:192) ~[classes/:?]
+	at tests.PractoTest.verifyHospitalSearch(PractoTest.java:38) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.12.0.jar:7.12.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:744) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.12.0.jar:7.12.0]
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65) [testng-rt.jar:?]
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105) [testng-rt.jar:?]
+2026-07-19 16:35:59.080 [main] INFO  SearchPage - ------------------------------------------------------
+2026-07-19 16:35:59.084 [main] ERROR SearchPage - Error while processing hospital
+org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=149.0.7827.103)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f333d1a80508fd965f9988a28d055073, getCurrentWindowHandle {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2505042\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54049}, goog:processID: 18756, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54049/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f333d1a80508fd965f9988a28d055073
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:143) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:224) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:217) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:682) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:686) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.getWindowHandle(RemoteWebDriver.java:521) ~[selenium-remote-driver-4.44.0.jar:?]
+	at pages.SearchPage.checkFacilities(SearchPage.java:45) ~[classes/:?]
+	at pages.SearchPage.searchHospital(SearchPage.java:192) ~[classes/:?]
+	at tests.PractoTest.verifyHospitalSearch(PractoTest.java:38) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.12.0.jar:7.12.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:744) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.12.0.jar:7.12.0]
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65) [testng-rt.jar:?]
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105) [testng-rt.jar:?]
+2026-07-19 16:35:59.090 [main] ERROR SearchPage - Error while processing hospital
+org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=149.0.7827.103)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f333d1a80508fd965f9988a28d055073, getCurrentWindowHandle {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2505042\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54049}, goog:processID: 18756, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54049/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f333d1a80508fd965f9988a28d055073
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:143) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:224) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:217) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:682) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:686) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.getWindowHandle(RemoteWebDriver.java:521) ~[selenium-remote-driver-4.44.0.jar:?]
+	at pages.SearchPage.checkFacilities(SearchPage.java:45) ~[classes/:?]
+	at pages.SearchPage.searchHospital(SearchPage.java:192) ~[classes/:?]
+	at tests.PractoTest.verifyHospitalSearch(PractoTest.java:38) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.12.0.jar:7.12.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:744) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.12.0.jar:7.12.0]
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65) [testng-rt.jar:?]
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105) [testng-rt.jar:?]
+2026-07-19 16:35:59.097 [main] ERROR SearchPage - Error while processing hospital
+org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=149.0.7827.103)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f333d1a80508fd965f9988a28d055073, getCurrentWindowHandle {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2505042\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54049}, goog:processID: 18756, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54049/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f333d1a80508fd965f9988a28d055073
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:143) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:224) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:217) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:682) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:686) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.getWindowHandle(RemoteWebDriver.java:521) ~[selenium-remote-driver-4.44.0.jar:?]
+	at pages.SearchPage.checkFacilities(SearchPage.java:45) ~[classes/:?]
+	at pages.SearchPage.searchHospital(SearchPage.java:192) ~[classes/:?]
+	at tests.PractoTest.verifyHospitalSearch(PractoTest.java:38) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.12.0.jar:7.12.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:744) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.12.0.jar:7.12.0]
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65) [testng-rt.jar:?]
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105) [testng-rt.jar:?]
+2026-07-19 16:35:59.102 [main] ERROR SearchPage - Error while processing hospital
+org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=149.0.7827.103)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f333d1a80508fd965f9988a28d055073, getCurrentWindowHandle {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2505042\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54049}, goog:processID: 18756, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54049/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f333d1a80508fd965f9988a28d055073
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:143) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:224) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:217) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:682) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:686) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.getWindowHandle(RemoteWebDriver.java:521) ~[selenium-remote-driver-4.44.0.jar:?]
+	at pages.SearchPage.checkFacilities(SearchPage.java:45) ~[classes/:?]
+	at pages.SearchPage.searchHospital(SearchPage.java:192) ~[classes/:?]
+	at tests.PractoTest.verifyHospitalSearch(PractoTest.java:38) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.12.0.jar:7.12.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:744) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.12.0.jar:7.12.0]
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65) [testng-rt.jar:?]
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105) [testng-rt.jar:?]
+2026-07-19 16:35:59.106 [main] ERROR SearchPage - Error while processing hospital
+org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=149.0.7827.103)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f333d1a80508fd965f9988a28d055073, getCurrentWindowHandle {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2505042\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54049}, goog:processID: 18756, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54049/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f333d1a80508fd965f9988a28d055073
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:143) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:224) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:217) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:682) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:686) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.getWindowHandle(RemoteWebDriver.java:521) ~[selenium-remote-driver-4.44.0.jar:?]
+	at pages.SearchPage.checkFacilities(SearchPage.java:45) ~[classes/:?]
+	at pages.SearchPage.searchHospital(SearchPage.java:192) ~[classes/:?]
+	at tests.PractoTest.verifyHospitalSearch(PractoTest.java:38) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.12.0.jar:7.12.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:744) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.12.0.jar:7.12.0]
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65) [testng-rt.jar:?]
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105) [testng-rt.jar:?]
+2026-07-19 16:35:59.113 [main] ERROR SearchPage - Error while processing hospital
+org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=149.0.7827.103)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f333d1a80508fd965f9988a28d055073, getCurrentWindowHandle {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2505042\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54049}, goog:processID: 18756, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54049/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f333d1a80508fd965f9988a28d055073
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:143) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:224) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:217) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:682) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:686) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.getWindowHandle(RemoteWebDriver.java:521) ~[selenium-remote-driver-4.44.0.jar:?]
+	at pages.SearchPage.checkFacilities(SearchPage.java:45) ~[classes/:?]
+	at pages.SearchPage.searchHospital(SearchPage.java:192) ~[classes/:?]
+	at tests.PractoTest.verifyHospitalSearch(PractoTest.java:38) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.12.0.jar:7.12.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:744) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.12.0.jar:7.12.0]
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65) [testng-rt.jar:?]
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105) [testng-rt.jar:?]
+2026-07-19 16:35:59.117 [main] ERROR SearchPage - Error while processing hospital
+org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=149.0.7827.103)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f333d1a80508fd965f9988a28d055073, getCurrentWindowHandle {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2505042\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54049}, goog:processID: 18756, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54049/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f333d1a80508fd965f9988a28d055073
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:143) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:224) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:217) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:682) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:686) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.getWindowHandle(RemoteWebDriver.java:521) ~[selenium-remote-driver-4.44.0.jar:?]
+	at pages.SearchPage.checkFacilities(SearchPage.java:45) ~[classes/:?]
+	at pages.SearchPage.searchHospital(SearchPage.java:192) ~[classes/:?]
+	at tests.PractoTest.verifyHospitalSearch(PractoTest.java:38) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.12.0.jar:7.12.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:744) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.12.0.jar:7.12.0]
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65) [testng-rt.jar:?]
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105) [testng-rt.jar:?]
+2026-07-19 16:35:59.122 [main] ERROR SearchPage - Error while processing hospital
+org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=149.0.7827.103)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f333d1a80508fd965f9988a28d055073, getCurrentWindowHandle {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2505042\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54049}, goog:processID: 18756, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54049/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f333d1a80508fd965f9988a28d055073
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:143) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:224) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:217) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:682) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:686) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.getWindowHandle(RemoteWebDriver.java:521) ~[selenium-remote-driver-4.44.0.jar:?]
+	at pages.SearchPage.checkFacilities(SearchPage.java:45) ~[classes/:?]
+	at pages.SearchPage.searchHospital(SearchPage.java:192) ~[classes/:?]
+	at tests.PractoTest.verifyHospitalSearch(PractoTest.java:38) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.12.0.jar:7.12.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:744) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.12.0.jar:7.12.0]
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65) [testng-rt.jar:?]
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105) [testng-rt.jar:?]
+2026-07-19 16:35:59.123 [main] INFO  SearchPage - Hospitals matching all criteria: 1
+2026-07-19 16:35:59.123 [main] INFO  SearchPage - Hospital Search Completed
+2026-07-19 16:36:28.811 [main] INFO  SearchPage - Starting Hospital Search
+2026-07-19 16:36:29.213 [main] INFO  SearchPage - Entered location: Bangalore
+2026-07-19 16:36:30.116 [main] INFO  SearchPage - Selected Bangalore from suggestions
+2026-07-19 16:36:30.428 [main] INFO  SearchPage - Searching hospitals
+2026-07-19 16:36:43.113 [main] INFO  SearchPage - Hospital option selected
+2026-07-19 16:36:43.204 [main] INFO  SearchPage - Total hospitals found: 10
+2026-07-19 16:36:43.335 [main] INFO  SearchPage - Checking hospital: Manipal Hospital Varthur Road (formerly Columbia Asia Hospital)
+2026-07-19 16:37:14.103 [main] ERROR SearchPage - Error while checking facilities
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.xpath: //h1[@class='c-profile__title']/child::span, but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//h1[@class='c-profile__title']/child::span"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2505042\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53673}, goog:processID: 29012, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53673/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5bc15fc93d5eeddf9ef99d300f46b755
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85) ~[selenium-support-4.44.0.jar:?]
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234) ~[selenium-support-4.44.0.jar:?]
+	at pages.SearchPage.checkFacilities(SearchPage.java:70) ~[classes/:?]
+	at pages.SearchPage.searchHospital(SearchPage.java:192) ~[classes/:?]
+	at tests.PractoTest.verifyHospitalSearch(PractoTest.java:38) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.12.0.jar:7.12.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:744) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.12.0.jar:7.12.0]
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65) [testng-rt.jar:?]
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105) [testng-rt.jar:?]
+2026-07-19 16:37:17.140 [main] INFO  SearchPage - ------------------------------------------------------
+2026-07-19 16:37:17.201 [main] INFO  SearchPage - Checking hospital: Manipal Hospitals
+2026-07-19 16:37:17.754 [main] INFO  SearchPage - Opened hospital profile: Manipal Hospital Varthur Road (formerly Columbia Asia Hospital), Whitefield
+2026-07-19 16:37:17.830 [main] INFO  SearchPage - Hospital Rating: 4.0
+2026-07-19 16:37:17.830 [main] INFO  SearchPage - Rating criteria passed for Manipal Hospital Varthur Road (formerly Columbia Asia Hospital), Whitefield
+2026-07-19 16:37:17.914 [main] INFO  SearchPage - Hospital Timing: Open 24 x 7
+2026-07-19 16:37:17.914 [main] INFO  SearchPage - 24x7 availability criteria passed for Manipal Hospital Varthur Road (formerly Columbia Asia Hospital), Whitefield
+2026-07-19 16:37:18.334 [main] INFO  SearchPage - Clicked Read More Info button
+2026-07-19 16:37:18.394 [main] DEBUG SearchPage - Amenity Found: Bloodbank
+2026-07-19 16:37:18.440 [main] DEBUG SearchPage - Amenity Found: Emergency Service
+2026-07-19 16:37:18.487 [main] DEBUG SearchPage - Amenity Found: 24X7 Pharmacy
+2026-07-19 16:37:18.540 [main] DEBUG SearchPage - Amenity Found: Cafeteria
+2026-07-19 16:37:18.592 [main] DEBUG SearchPage - Amenity Found: Bank/ATM
+2026-07-19 16:37:18.646 [main] DEBUG SearchPage - Amenity Found: Parking
+2026-07-19 16:37:18.669 [main] INFO  SearchPage - Parking facility available
+2026-07-19 16:37:18.670 [main] INFO  SearchPage - Verification Result -> Rating: true, Availability: true, Parking: true
+2026-07-19 16:37:18.825 [main] INFO  SearchPage - ------------------------------------------------------
+2026-07-19 16:37:18.826 [main] INFO  SearchPage - Hospital added to filtered list
+2026-07-19 16:37:18.891 [main] INFO  SearchPage - Checking hospital: Koshys Hospital
+2026-07-19 16:37:21.648 [main] INFO  SearchPage - Opened hospital profile: Manipal Hospitals, Yeshwanthpur
+2026-07-19 16:37:21.836 [main] INFO  SearchPage - Hospital Rating: 4.5
+2026-07-19 16:37:21.836 [main] INFO  SearchPage - Rating criteria passed for Manipal Hospitals, Yeshwanthpur
+2026-07-19 16:37:21.984 [main] INFO  SearchPage - Hospital Timing: Open 24 x 7
+2026-07-19 16:37:21.985 [main] INFO  SearchPage - 24x7 availability criteria passed for Manipal Hospitals, Yeshwanthpur
+2026-07-19 16:37:22.497 [main] INFO  SearchPage - Clicked Read More Info button
+2026-07-19 16:37:22.569 [main] DEBUG SearchPage - Amenity Found: Bloodbank
+2026-07-19 16:37:22.621 [main] DEBUG SearchPage - Amenity Found: Emergency Service
+2026-07-19 16:37:22.664 [main] DEBUG SearchPage - Amenity Found: 24X7 Pharmacy
+2026-07-19 16:37:22.707 [main] DEBUG SearchPage - Amenity Found: Cafeteria
+2026-07-19 16:37:22.752 [main] DEBUG SearchPage - Amenity Found: Bank/ATM
+2026-07-19 16:37:22.798 [main] DEBUG SearchPage - Amenity Found: Parking
+2026-07-19 16:37:22.823 [main] INFO  SearchPage - Parking facility available
+2026-07-19 16:37:22.823 [main] INFO  SearchPage - Verification Result -> Rating: true, Availability: true, Parking: true
+2026-07-19 16:37:23.000 [main] INFO  SearchPage - ------------------------------------------------------
+2026-07-19 16:37:23.001 [main] INFO  SearchPage - Hospital added to filtered list
+2026-07-19 16:37:23.075 [main] INFO  SearchPage - Checking hospital: Motherhood Hospital
+2026-07-19 16:37:24.407 [main] INFO  SearchPage - Opened hospital profile: Koshys Hospital, Ramamurthy Nagar
+2026-07-19 16:37:24.471 [main] INFO  SearchPage - Hospital Rating: 4.0
+2026-07-19 16:37:24.471 [main] INFO  SearchPage - Rating criteria passed for Koshys Hospital, Ramamurthy Nagar
+2026-07-19 16:37:24.542 [main] INFO  SearchPage - Hospital Timing: Open 24 x 7
+2026-07-19 16:37:24.544 [main] INFO  SearchPage - 24x7 availability criteria passed for Koshys Hospital, Ramamurthy Nagar
+2026-07-19 16:37:24.773 [main] INFO  SearchPage - Clicked Read More Info button
+2026-07-19 16:37:24.823 [main] DEBUG SearchPage - Amenity Found: Emergency Service
+2026-07-19 16:37:24.861 [main] DEBUG SearchPage - Amenity Found: 24X7 Pharmacy
+2026-07-19 16:37:24.899 [main] DEBUG SearchPage - Amenity Found: Cafeteria
+2026-07-19 16:37:24.934 [main] DEBUG SearchPage - Amenity Found: Parking
+2026-07-19 16:37:24.958 [main] INFO  SearchPage - Parking facility available
+2026-07-19 16:37:24.958 [main] INFO  SearchPage - Verification Result -> Rating: true, Availability: true, Parking: true
+2026-07-19 16:37:25.072 [main] INFO  SearchPage - ------------------------------------------------------
+2026-07-19 16:37:25.072 [main] INFO  SearchPage - Hospital added to filtered list
+2026-07-19 16:37:25.114 [main] INFO  SearchPage - Checking hospital: Motherhood Hospital
+2026-07-19 16:37:26.011 [main] INFO  SearchPage - Opened hospital profile: Motherhood Hospital, Indiranagar
+2026-07-19 16:37:26.091 [main] INFO  SearchPage - Hospital Rating: 4.5
+2026-07-19 16:37:26.091 [main] INFO  SearchPage - Rating criteria passed for Motherhood Hospital, Indiranagar
+2026-07-19 16:37:26.158 [main] INFO  SearchPage - Hospital Timing: Open 24 x 7
+2026-07-19 16:37:26.158 [main] INFO  SearchPage - 24x7 availability criteria passed for Motherhood Hospital, Indiranagar
+2026-07-19 16:37:26.457 [main] INFO  SearchPage - Clicked Read More Info button
+2026-07-19 16:37:26.514 [main] DEBUG SearchPage - Amenity Found: Bloodbank
+2026-07-19 16:37:26.563 [main] DEBUG SearchPage - Amenity Found: Diagnostic Lab Service
+2026-07-19 16:37:26.624 [main] DEBUG SearchPage - Amenity Found: Emergency Service
+2026-07-19 16:37:26.684 [main] DEBUG SearchPage - Amenity Found: 24X7 Pharmacy
+2026-07-19 16:37:26.733 [main] DEBUG SearchPage - Amenity Found: Cafeteria
+2026-07-19 16:37:26.797 [main] DEBUG SearchPage - Amenity Found: Parking
+2026-07-19 16:37:26.823 [main] INFO  SearchPage - Parking facility available
+2026-07-19 16:37:26.823 [main] INFO  SearchPage - Verification Result -> Rating: true, Availability: true, Parking: true
+2026-07-19 16:37:26.929 [main] INFO  SearchPage - ------------------------------------------------------
+2026-07-19 16:37:26.929 [main] INFO  SearchPage - Hospital added to filtered list
+2026-07-19 16:37:26.973 [main] INFO  SearchPage - Checking hospital: Sagar Hospitals
+2026-07-19 16:37:28.275 [main] INFO  SearchPage - Opened hospital profile: Motherhood Hospital, Whitefield
+2026-07-19 16:37:28.383 [main] INFO  SearchPage - Hospital Rating: 4.5
+2026-07-19 16:37:28.383 [main] INFO  SearchPage - Rating criteria passed for Motherhood Hospital, Whitefield
+2026-07-19 16:37:28.462 [main] INFO  SearchPage - Hospital Timing: Open 24 x 7
+2026-07-19 16:37:28.462 [main] INFO  SearchPage - 24x7 availability criteria passed for Motherhood Hospital, Whitefield
+2026-07-19 16:37:29.159 [main] INFO  SearchPage - Clicked Read More Info button
+2026-07-19 16:37:29.223 [main] DEBUG SearchPage - Amenity Found: Bloodbank
+2026-07-19 16:37:29.279 [main] DEBUG SearchPage - Amenity Found: Emergency Service
+2026-07-19 16:37:29.343 [main] DEBUG SearchPage - Amenity Found: 24X7 Pharmacy
+2026-07-19 16:37:29.409 [main] DEBUG SearchPage - Amenity Found: Cafeteria
+2026-07-19 16:37:29.462 [main] DEBUG SearchPage - Amenity Found: Parking
+2026-07-19 16:37:29.492 [main] INFO  SearchPage - Parking facility available
+2026-07-19 16:37:29.492 [main] INFO  SearchPage - Verification Result -> Rating: true, Availability: true, Parking: true
+2026-07-19 16:37:29.593 [main] INFO  SearchPage - ------------------------------------------------------
+2026-07-19 16:37:29.593 [main] INFO  SearchPage - Hospital added to filtered list
+2026-07-19 16:37:29.700 [main] INFO  SearchPage - Checking hospital: Apollo Cradle & Children’s Hospital
+2026-07-19 16:37:31.108 [main] INFO  SearchPage - Opened hospital profile: Sagar Hospitals, Banashankari
+2026-07-19 16:37:31.194 [main] INFO  SearchPage - Hospital Rating: 4.0
+2026-07-19 16:37:31.194 [main] INFO  SearchPage - Rating criteria passed for Sagar Hospitals, Banashankari
+2026-07-19 16:37:31.297 [main] INFO  SearchPage - Hospital Timing: Open 24 x 7
+2026-07-19 16:37:31.297 [main] INFO  SearchPage - 24x7 availability criteria passed for Sagar Hospitals, Banashankari
+2026-07-19 16:37:31.589 [main] INFO  SearchPage - Clicked Read More Info button
+2026-07-19 16:37:31.634 [main] DEBUG SearchPage - Amenity Found: Bloodbank
+2026-07-19 16:37:31.681 [main] DEBUG SearchPage - Amenity Found: Emergency Service
+2026-07-19 16:37:31.724 [main] DEBUG SearchPage - Amenity Found: 24X7 Pharmacy
+2026-07-19 16:37:31.780 [main] DEBUG SearchPage - Amenity Found: Cafeteria
+2026-07-19 16:37:31.837 [main] DEBUG SearchPage - Amenity Found: Bank/ATM
+2026-07-19 16:37:31.885 [main] DEBUG SearchPage - Amenity Found: Parking
+2026-07-19 16:37:31.910 [main] INFO  SearchPage - Parking facility available
+2026-07-19 16:37:31.910 [main] INFO  SearchPage - Verification Result -> Rating: true, Availability: true, Parking: true
+2026-07-19 16:37:32.019 [main] INFO  SearchPage - ------------------------------------------------------
+2026-07-19 16:37:32.019 [main] INFO  SearchPage - Hospital added to filtered list
+2026-07-19 16:37:32.071 [main] INFO  SearchPage - Checking hospital: Manipal Hospital
+2026-07-19 16:37:33.259 [main] INFO  SearchPage - Opened hospital profile: Apollo Cradle & Children’s Hospital, Whitefield
+2026-07-19 16:37:33.350 [main] INFO  SearchPage - Hospital Rating: 4.5
+2026-07-19 16:37:33.350 [main] INFO  SearchPage - Rating criteria passed for Apollo Cradle & Children’s Hospital, Whitefield
+2026-07-19 16:37:33.437 [main] INFO  SearchPage - Hospital Timing: Open 24 x 7
+2026-07-19 16:37:33.437 [main] INFO  SearchPage - 24x7 availability criteria passed for Apollo Cradle & Children’s Hospital, Whitefield
+2026-07-19 16:37:33.732 [main] INFO  SearchPage - Clicked Read More Info button
+2026-07-19 16:37:33.783 [main] DEBUG SearchPage - Amenity Found: Emergency Service
+2026-07-19 16:37:33.843 [main] DEBUG SearchPage - Amenity Found: Cafeteria
+2026-07-19 16:37:33.899 [main] DEBUG SearchPage - Amenity Found: Parking
+2026-07-19 16:37:33.927 [main] INFO  SearchPage - Parking facility available
+2026-07-19 16:37:33.927 [main] INFO  SearchPage - Verification Result -> Rating: true, Availability: true, Parking: true
+2026-07-19 16:37:34.031 [main] INFO  SearchPage - ------------------------------------------------------
+2026-07-19 16:37:34.033 [main] INFO  SearchPage - Hospital added to filtered list
+2026-07-19 16:37:34.087 [main] INFO  SearchPage - Checking hospital: Manipal Hospital
+2026-07-19 16:37:34.924 [main] INFO  SearchPage - Opened hospital profile: Manipal Hospital, Hebbal
+2026-07-19 16:37:34.974 [main] INFO  SearchPage - Hospital Rating: 3.5
+2026-07-19 16:37:34.974 [main] INFO  SearchPage - Rating criteria passed for Manipal Hospital, Hebbal
+2026-07-19 16:37:35.024 [main] INFO  SearchPage - Hospital Timing: Open 24 x 7
+2026-07-19 16:37:35.024 [main] INFO  SearchPage - 24x7 availability criteria passed for Manipal Hospital, Hebbal
+2026-07-19 16:37:35.233 [main] INFO  SearchPage - Clicked Read More Info button
+2026-07-19 16:37:35.295 [main] DEBUG SearchPage - Amenity Found: Emergency Service
+2026-07-19 16:37:35.330 [main] DEBUG SearchPage - Amenity Found: 24X7 Pharmacy
+2026-07-19 16:37:35.357 [main] DEBUG SearchPage - Amenity Found: Cafeteria
+2026-07-19 16:37:35.403 [main] DEBUG SearchPage - Amenity Found: Bank/ATM
+2026-07-19 16:37:35.452 [main] DEBUG SearchPage - Amenity Found: Parking
+2026-07-19 16:37:35.484 [main] INFO  SearchPage - Parking facility available
+2026-07-19 16:37:35.484 [main] INFO  SearchPage - Verification Result -> Rating: true, Availability: true, Parking: true
+2026-07-19 16:37:35.581 [main] INFO  SearchPage - ------------------------------------------------------
+2026-07-19 16:37:35.589 [main] INFO  SearchPage - Hospital added to filtered list
+2026-07-19 16:37:35.639 [main] INFO  SearchPage - Checking hospital: Cloudnine Hospital - Old Airport Road
+2026-07-19 16:37:36.749 [main] INFO  SearchPage - Opened hospital profile: Manipal Hospital, Jayanagar 9 Block
+2026-07-19 16:37:36.823 [main] INFO  SearchPage - Hospital Rating: 4.5
+2026-07-19 16:37:36.823 [main] INFO  SearchPage - Rating criteria passed for Manipal Hospital, Jayanagar 9 Block
+2026-07-19 16:37:36.906 [main] INFO  SearchPage - Hospital Timing: Mon - Sun
+2026-07-19 16:37:37.212 [main] INFO  SearchPage - Clicked Read More Info button
+2026-07-19 16:37:37.266 [main] DEBUG SearchPage - Amenity Found: Bloodbank
+2026-07-19 16:37:37.315 [main] DEBUG SearchPage - Amenity Found: Emergency Service
+2026-07-19 16:37:37.364 [main] DEBUG SearchPage - Amenity Found: 24X7 Pharmacy
+2026-07-19 16:37:37.412 [main] DEBUG SearchPage - Amenity Found: Cafeteria
+2026-07-19 16:37:37.469 [main] DEBUG SearchPage - Amenity Found: Bank/ATM
+2026-07-19 16:37:37.525 [main] DEBUG SearchPage - Amenity Found: Parking
+2026-07-19 16:37:37.557 [main] INFO  SearchPage - Parking facility available
+2026-07-19 16:37:37.557 [main] INFO  SearchPage - Verification Result -> Rating: true, Availability: false, Parking: true
+2026-07-19 16:37:37.707 [main] INFO  SearchPage - ------------------------------------------------------
+2026-07-19 16:37:37.708 [main] INFO  SearchPage - Hospitals matching all criteria: 8
+2026-07-19 16:37:37.708 [main] INFO  SearchPage - Hospital Search Completed
+2026-07-19 16:37:55.063 [main] INFO  LabTestPage - LabTestPage page object initialized
+2026-07-19 16:37:55.064 [main] INFO  LabTestPage - Starting to fetch top cities for Lab Tests
+2026-07-19 16:37:55.065 [main] DEBUG LabTestPage - Clicking on 'Lab Tests' element
+2026-07-19 16:37:58.597 [main] INFO  LabTestPage - Successfully clicked 'Lab Tests'
+2026-07-19 16:37:58.598 [main] DEBUG LabTestPage - Fetching all cities list
+2026-07-19 16:38:00.449 [main] INFO  LabTestPage - Found 8 cities
+2026-07-19 16:38:00.449 [main] INFO  LabTestPage - ---City names---
+2026-07-19 16:38:00.500 [main] DEBUG LabTestPage - City: Bangalore
+2026-07-19 16:38:00.534 [main] DEBUG LabTestPage - City: Delhi
+2026-07-19 16:38:00.588 [main] DEBUG LabTestPage - City: Mumbai
+2026-07-19 16:38:00.615 [main] DEBUG LabTestPage - City: Chennai
+2026-07-19 16:38:00.645 [main] DEBUG LabTestPage - City: Hyderabad
+2026-07-19 16:38:00.677 [main] DEBUG LabTestPage - City: Kolkata
+2026-07-19 16:38:00.713 [main] DEBUG LabTestPage - City: Pune
+2026-07-19 16:38:00.743 [main] DEBUG LabTestPage - City: Ahmedabad
+2026-07-19 16:38:00.744 [main] INFO  LabTestPage - Cities retrieved: Bangalore Delhi Mumbai Chennai Hyderabad Kolkata Pune Ahmedabad 
+2026-07-19 16:38:55.174 [main] INFO  SearchPage - Starting Hospital Search
+2026-07-19 16:38:55.453 [main] INFO  SearchPage - Entered location: Bangalore
+2026-07-19 16:38:56.297 [main] INFO  SearchPage - Selected Bangalore from suggestions
+2026-07-19 16:38:56.490 [main] INFO  SearchPage - Searching hospitals
+2026-07-19 16:39:09.607 [main] INFO  SearchPage - Hospital option selected
+2026-07-19 16:39:09.674 [main] INFO  SearchPage - Total hospitals found: 10
+2026-07-19 16:39:09.754 [main] INFO  SearchPage - Checking hospital: Manipal Hospital Varthur Road (formerly Columbia Asia Hospital)
+2026-07-19 16:39:15.467 [main] INFO  SearchPage - Opened hospital profile: Manipal Hospital Varthur Road (formerly Columbia Asia Hospital), Whitefield
+2026-07-19 16:39:15.541 [main] INFO  SearchPage - Hospital Rating: 4.0
+2026-07-19 16:39:15.541 [main] INFO  SearchPage - Rating criteria passed for Manipal Hospital Varthur Road (formerly Columbia Asia Hospital), Whitefield
+2026-07-19 16:39:15.643 [main] INFO  SearchPage - Hospital Timing: Open 24 x 7
+2026-07-19 16:39:15.643 [main] INFO  SearchPage - 24x7 availability criteria passed for Manipal Hospital Varthur Road (formerly Columbia Asia Hospital), Whitefield
+2026-07-19 16:39:15.986 [main] INFO  SearchPage - Clicked Read More Info button
+2026-07-19 16:39:16.040 [main] DEBUG SearchPage - Amenity Found: Bloodbank
+2026-07-19 16:39:16.087 [main] DEBUG SearchPage - Amenity Found: Emergency Service
+2026-07-19 16:39:16.151 [main] DEBUG SearchPage - Amenity Found: 24X7 Pharmacy
+2026-07-19 16:39:16.199 [main] DEBUG SearchPage - Amenity Found: Cafeteria
+2026-07-19 16:39:16.272 [main] DEBUG SearchPage - Amenity Found: Bank/ATM
+2026-07-19 16:39:16.349 [main] DEBUG SearchPage - Amenity Found: Parking
+2026-07-19 16:39:16.374 [main] INFO  SearchPage - Parking facility available
+2026-07-19 16:39:16.374 [main] INFO  SearchPage - Verification Result -> Rating: true, Availability: true, Parking: true
+2026-07-19 16:39:16.465 [main] INFO  SearchPage - ------------------------------------------------------
+2026-07-19 16:39:16.465 [main] INFO  SearchPage - Hospital added to filtered list
+2026-07-19 16:39:16.507 [main] INFO  SearchPage - Checking hospital: Manipal Hospitals
+2026-07-19 16:39:47.222 [main] ERROR SearchPage - Error while checking facilities
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.xpath: //h1[@class='c-profile__title']/child::span
+(tried for 30 seconds with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85) ~[selenium-support-4.44.0.jar:?]
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234) ~[selenium-support-4.44.0.jar:?]
+	at pages.SearchPage.checkFacilities(SearchPage.java:70) ~[classes/:?]
+	at pages.SearchPage.searchHospital(SearchPage.java:192) ~[classes/:?]
+	at tests.PractoTest.verifyHospitalSearch(PractoTest.java:38) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.12.0.jar:7.12.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:744) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.12.0.jar:7.12.0]
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65) [testng-rt.jar:?]
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105) [testng-rt.jar:?]
+Caused by: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=149.0.7827.103)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [be38c41c8dc412ba3034bec6b8bee9fe, findElement {value=//h1[@class='c-profile__title']/child::span, using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2505042\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53723}, goog:processID: 15820, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53723/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: be38c41c8dc412ba3034bec6b8bee9fe
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:143) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:224) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:217) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:173) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:421) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:415) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:222) ~[selenium-support-4.44.0.jar:?]
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:215) ~[selenium-support-4.44.0.jar:?]
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:210) ~[selenium-support-4.44.0.jar:?]
+	... 28 more
+2026-07-19 16:39:47.282 [main] ERROR SearchPage - Error while switching back to main window
+org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=149.0.7827.103)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [be38c41c8dc412ba3034bec6b8bee9fe, close {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2505042\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53723}, goog:processID: 15820, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53723/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: be38c41c8dc412ba3034bec6b8bee9fe
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:143) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:224) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:217) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:682) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:686) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:471) ~[selenium-remote-driver-4.44.0.jar:?]
+	at pages.SearchPage.checkFacilities(SearchPage.java:137) ~[classes/:?]
+	at pages.SearchPage.searchHospital(SearchPage.java:192) ~[classes/:?]
+	at tests.PractoTest.verifyHospitalSearch(PractoTest.java:38) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.12.0.jar:7.12.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:744) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.12.0.jar:7.12.0]
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65) [testng-rt.jar:?]
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105) [testng-rt.jar:?]
+2026-07-19 16:39:47.282 [main] INFO  SearchPage - ------------------------------------------------------
+2026-07-19 16:39:47.282 [main] ERROR SearchPage - Error while processing hospital
+org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=149.0.7827.103)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [be38c41c8dc412ba3034bec6b8bee9fe, getCurrentWindowHandle {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2505042\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53723}, goog:processID: 15820, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53723/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: be38c41c8dc412ba3034bec6b8bee9fe
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:143) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:224) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:217) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:682) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:686) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.getWindowHandle(RemoteWebDriver.java:521) ~[selenium-remote-driver-4.44.0.jar:?]
+	at pages.SearchPage.checkFacilities(SearchPage.java:45) ~[classes/:?]
+	at pages.SearchPage.searchHospital(SearchPage.java:192) ~[classes/:?]
+	at tests.PractoTest.verifyHospitalSearch(PractoTest.java:38) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.12.0.jar:7.12.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:744) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.12.0.jar:7.12.0]
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65) [testng-rt.jar:?]
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105) [testng-rt.jar:?]
+2026-07-19 16:39:47.298 [main] ERROR SearchPage - Error while processing hospital
+org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=149.0.7827.103)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [be38c41c8dc412ba3034bec6b8bee9fe, getCurrentWindowHandle {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2505042\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53723}, goog:processID: 15820, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53723/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: be38c41c8dc412ba3034bec6b8bee9fe
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:143) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:224) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:217) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:682) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:686) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.getWindowHandle(RemoteWebDriver.java:521) ~[selenium-remote-driver-4.44.0.jar:?]
+	at pages.SearchPage.checkFacilities(SearchPage.java:45) ~[classes/:?]
+	at pages.SearchPage.searchHospital(SearchPage.java:192) ~[classes/:?]
+	at tests.PractoTest.verifyHospitalSearch(PractoTest.java:38) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.12.0.jar:7.12.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:744) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.12.0.jar:7.12.0]
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65) [testng-rt.jar:?]
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105) [testng-rt.jar:?]
+2026-07-19 16:39:47.322 [main] ERROR SearchPage - Error while processing hospital
+org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=149.0.7827.103)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [be38c41c8dc412ba3034bec6b8bee9fe, getCurrentWindowHandle {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2505042\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53723}, goog:processID: 15820, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53723/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: be38c41c8dc412ba3034bec6b8bee9fe
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:143) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:224) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:217) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:682) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:686) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.getWindowHandle(RemoteWebDriver.java:521) ~[selenium-remote-driver-4.44.0.jar:?]
+	at pages.SearchPage.checkFacilities(SearchPage.java:45) ~[classes/:?]
+	at pages.SearchPage.searchHospital(SearchPage.java:192) ~[classes/:?]
+	at tests.PractoTest.verifyHospitalSearch(PractoTest.java:38) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.12.0.jar:7.12.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:744) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.12.0.jar:7.12.0]
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65) [testng-rt.jar:?]
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105) [testng-rt.jar:?]
+2026-07-19 16:39:47.346 [main] ERROR SearchPage - Error while processing hospital
+org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=149.0.7827.103)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [be38c41c8dc412ba3034bec6b8bee9fe, getCurrentWindowHandle {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2505042\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53723}, goog:processID: 15820, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53723/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: be38c41c8dc412ba3034bec6b8bee9fe
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:143) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:224) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:217) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:682) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:686) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.getWindowHandle(RemoteWebDriver.java:521) ~[selenium-remote-driver-4.44.0.jar:?]
+	at pages.SearchPage.checkFacilities(SearchPage.java:45) ~[classes/:?]
+	at pages.SearchPage.searchHospital(SearchPage.java:192) ~[classes/:?]
+	at tests.PractoTest.verifyHospitalSearch(PractoTest.java:38) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.12.0.jar:7.12.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:744) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.12.0.jar:7.12.0]
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65) [testng-rt.jar:?]
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105) [testng-rt.jar:?]
+2026-07-19 16:39:47.363 [main] ERROR SearchPage - Error while processing hospital
+org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=149.0.7827.103)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [be38c41c8dc412ba3034bec6b8bee9fe, getCurrentWindowHandle {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2505042\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53723}, goog:processID: 15820, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53723/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: be38c41c8dc412ba3034bec6b8bee9fe
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:143) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:224) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:217) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:682) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:686) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.getWindowHandle(RemoteWebDriver.java:521) ~[selenium-remote-driver-4.44.0.jar:?]
+	at pages.SearchPage.checkFacilities(SearchPage.java:45) ~[classes/:?]
+	at pages.SearchPage.searchHospital(SearchPage.java:192) ~[classes/:?]
+	at tests.PractoTest.verifyHospitalSearch(PractoTest.java:38) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.12.0.jar:7.12.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:744) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.12.0.jar:7.12.0]
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65) [testng-rt.jar:?]
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105) [testng-rt.jar:?]
+2026-07-19 16:39:47.382 [main] ERROR SearchPage - Error while processing hospital
+org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=149.0.7827.103)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [be38c41c8dc412ba3034bec6b8bee9fe, getCurrentWindowHandle {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2505042\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53723}, goog:processID: 15820, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53723/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: be38c41c8dc412ba3034bec6b8bee9fe
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:143) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:224) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:217) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:682) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:686) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.getWindowHandle(RemoteWebDriver.java:521) ~[selenium-remote-driver-4.44.0.jar:?]
+	at pages.SearchPage.checkFacilities(SearchPage.java:45) ~[classes/:?]
+	at pages.SearchPage.searchHospital(SearchPage.java:192) ~[classes/:?]
+	at tests.PractoTest.verifyHospitalSearch(PractoTest.java:38) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.12.0.jar:7.12.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:744) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.12.0.jar:7.12.0]
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65) [testng-rt.jar:?]
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105) [testng-rt.jar:?]
+2026-07-19 16:39:47.395 [main] ERROR SearchPage - Error while processing hospital
+org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=149.0.7827.103)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [be38c41c8dc412ba3034bec6b8bee9fe, getCurrentWindowHandle {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2505042\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53723}, goog:processID: 15820, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53723/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: be38c41c8dc412ba3034bec6b8bee9fe
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:143) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:224) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:217) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:682) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:686) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.getWindowHandle(RemoteWebDriver.java:521) ~[selenium-remote-driver-4.44.0.jar:?]
+	at pages.SearchPage.checkFacilities(SearchPage.java:45) ~[classes/:?]
+	at pages.SearchPage.searchHospital(SearchPage.java:192) ~[classes/:?]
+	at tests.PractoTest.verifyHospitalSearch(PractoTest.java:38) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.12.0.jar:7.12.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:744) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.12.0.jar:7.12.0]
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65) [testng-rt.jar:?]
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105) [testng-rt.jar:?]
+2026-07-19 16:39:47.411 [main] ERROR SearchPage - Error while processing hospital
+org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=149.0.7827.103)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [be38c41c8dc412ba3034bec6b8bee9fe, getCurrentWindowHandle {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2505042\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53723}, goog:processID: 15820, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53723/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: be38c41c8dc412ba3034bec6b8bee9fe
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:143) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:224) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:217) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:682) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:686) ~[selenium-remote-driver-4.44.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.getWindowHandle(RemoteWebDriver.java:521) ~[selenium-remote-driver-4.44.0.jar:?]
+	at pages.SearchPage.checkFacilities(SearchPage.java:45) ~[classes/:?]
+	at pages.SearchPage.searchHospital(SearchPage.java:192) ~[classes/:?]
+	at tests.PractoTest.verifyHospitalSearch(PractoTest.java:38) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.12.0.jar:7.12.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:744) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.12.0.jar:7.12.0]
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65) [testng-rt.jar:?]
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105) [testng-rt.jar:?]
+2026-07-19 16:39:47.411 [main] INFO  SearchPage - Hospitals matching all criteria: 1
+2026-07-19 16:39:47.411 [main] INFO  SearchPage - Hospital Search Completed
+2026-07-19 16:45:09.207 [main] INFO  SearchPage - Starting Hospital Search
+2026-07-19 16:45:09.532 [main] INFO  SearchPage - Entered location: Bangalore
+2026-07-19 16:45:10.373 [main] INFO  SearchPage - Selected Bangalore from suggestions
+2026-07-19 16:45:10.600 [main] INFO  SearchPage - Searching hospitals
+2026-07-19 16:45:24.725 [main] INFO  SearchPage - Hospital option selected
+2026-07-19 16:45:24.810 [main] INFO  SearchPage - Total hospitals found: 10
+2026-07-19 16:45:24.898 [main] INFO  SearchPage - Checking hospital: Manipal Hospital Varthur Road (formerly Columbia Asia Hospital)
+2026-07-19 16:45:55.327 [main] ERROR SearchPage - Error while checking facilities
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.xpath: //h1[@class='c-profile__title']/child::span, but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//h1[@class='c-profile__title']/child::span"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2505042\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52180}, goog:processID: 32636, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52180/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9d511a221c614456a8dbad461aadce69
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85) ~[selenium-support-4.44.0.jar:?]
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234) ~[selenium-support-4.44.0.jar:?]
+	at pages.SearchPage.checkFacilities(SearchPage.java:70) ~[classes/:?]
+	at pages.SearchPage.searchHospital(SearchPage.java:192) ~[classes/:?]
+	at tests.PractoTest.verifyHospitalSearch(PractoTest.java:38) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.12.0.jar:7.12.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.12.0.jar:7.12.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:744) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.12.0.jar:7.12.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.12.0.jar:7.12.0]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.12.0.jar:7.12.0]
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65) [testng-rt.jar:?]
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105) [testng-rt.jar:?]
+2026-07-19 16:45:56.975 [main] INFO  SearchPage - ------------------------------------------------------
+2026-07-19 16:45:57.110 [main] INFO  SearchPage - Checking hospital: Manipal Hospitals
+2026-07-19 16:45:57.644 [main] INFO  SearchPage - Opened hospital profile: Manipal Hospital Varthur Road (formerly Columbia Asia Hospital), Whitefield
+2026-07-19 16:45:57.723 [main] INFO  SearchPage - Hospital Rating: 4.0
+2026-07-19 16:45:57.723 [main] INFO  SearchPage - Rating criteria passed for Manipal Hospital Varthur Road (formerly Columbia Asia Hospital), Whitefield
+2026-07-19 16:45:57.802 [main] INFO  SearchPage - Hospital Timing: Open 24 x 7
+2026-07-19 16:45:57.802 [main] INFO  SearchPage - 24x7 availability criteria passed for Manipal Hospital Varthur Road (formerly Columbia Asia Hospital), Whitefield
+2026-07-19 16:45:58.202 [main] INFO  SearchPage - Clicked Read More Info button
+2026-07-19 16:45:58.283 [main] DEBUG SearchPage - Amenity Found: Bloodbank
+2026-07-19 16:45:58.330 [main] DEBUG SearchPage - Amenity Found: Emergency Service
+2026-07-19 16:45:58.385 [main] DEBUG SearchPage - Amenity Found: 24X7 Pharmacy
+2026-07-19 16:45:58.432 [main] DEBUG SearchPage - Amenity Found: Cafeteria
+2026-07-19 16:45:58.476 [main] DEBUG SearchPage - Amenity Found: Bank/ATM
+2026-07-19 16:45:58.516 [main] DEBUG SearchPage - Amenity Found: Parking
+2026-07-19 16:45:58.539 [main] INFO  SearchPage - Parking facility available
+2026-07-19 16:45:58.540 [main] INFO  SearchPage - Verification Result -> Rating: true, Availability: true, Parking: true
+2026-07-19 16:45:58.731 [main] INFO  SearchPage - ------------------------------------------------------
+2026-07-19 16:45:58.731 [main] INFO  SearchPage - Hospital added to filtered list
+2026-07-19 16:45:58.804 [main] INFO  SearchPage - Checking hospital: Koshys Hospital
+2026-07-19 16:46:01.506 [main] INFO  SearchPage - Opened hospital profile: Manipal Hospitals, Yeshwanthpur
+2026-07-19 16:46:01.721 [main] INFO  SearchPage - Hospital Rating: 4.5
+2026-07-19 16:46:01.722 [main] INFO  SearchPage - Rating criteria passed for Manipal Hospitals, Yeshwanthpur
+2026-07-19 16:46:01.882 [main] INFO  SearchPage - Hospital Timing: Open 24 x 7
+2026-07-19 16:46:01.883 [main] INFO  SearchPage - 24x7 availability criteria passed for Manipal Hospitals, Yeshwanthpur
+2026-07-19 16:46:02.279 [main] INFO  SearchPage - Clicked Read More Info button
+2026-07-19 16:46:02.377 [main] DEBUG SearchPage - Amenity Found: Bloodbank
+2026-07-19 16:46:02.428 [main] DEBUG SearchPage - Amenity Found: Emergency Service
+2026-07-19 16:46:02.489 [main] DEBUG SearchPage - Amenity Found: 24X7 Pharmacy
+2026-07-19 16:46:02.544 [main] DEBUG SearchPage - Amenity Found: Cafeteria
+2026-07-19 16:46:02.596 [main] DEBUG SearchPage - Amenity Found: Bank/ATM
+2026-07-19 16:46:02.651 [main] DEBUG SearchPage - Amenity Found: Parking
+2026-07-19 16:46:02.679 [main] INFO  SearchPage - Parking facility available
+2026-07-19 16:46:02.680 [main] INFO  SearchPage - Verification Result -> Rating: true, Availability: true, Parking: true
+2026-07-19 16:46:02.827 [main] INFO  SearchPage - ------------------------------------------------------
+2026-07-19 16:46:02.827 [main] INFO  SearchPage - Hospital added to filtered list
+2026-07-19 16:46:02.893 [main] INFO  SearchPage - Checking hospital: Motherhood Hospital
+2026-07-19 16:46:04.786 [main] INFO  SearchPage - Opened hospital profile: Koshys Hospital, Ramamurthy Nagar
+2026-07-19 16:46:04.860 [main] INFO  SearchPage - Hospital Rating: 4.0
+2026-07-19 16:46:04.860 [main] INFO  SearchPage - Rating criteria passed for Koshys Hospital, Ramamurthy Nagar
+2026-07-19 16:46:05.059 [main] INFO  SearchPage - Hospital Timing: Open 24 x 7
+2026-07-19 16:46:05.059 [main] INFO  SearchPage - 24x7 availability criteria passed for Koshys Hospital, Ramamurthy Nagar
+2026-07-19 16:46:05.397 [main] INFO  SearchPage - Clicked Read More Info button
+2026-07-19 16:46:05.489 [main] DEBUG SearchPage - Amenity Found: Emergency Service
+2026-07-19 16:46:05.536 [main] DEBUG SearchPage - Amenity Found: 24X7 Pharmacy
+2026-07-19 16:46:05.592 [main] DEBUG SearchPage - Amenity Found: Cafeteria
+2026-07-19 16:46:05.653 [main] DEBUG SearchPage - Amenity Found: Parking
+2026-07-19 16:46:05.678 [main] INFO  SearchPage - Parking facility available
+2026-07-19 16:46:05.680 [main] INFO  SearchPage - Verification Result -> Rating: true, Availability: true, Parking: true
+2026-07-19 16:46:05.874 [main] INFO  SearchPage - ------------------------------------------------------
+2026-07-19 16:46:05.875 [main] INFO  SearchPage - Hospital added to filtered list
+2026-07-19 16:46:05.942 [main] INFO  SearchPage - Checking hospital: Motherhood Hospital
+2026-07-19 16:46:07.929 [main] INFO  SearchPage - Opened hospital profile: Motherhood Hospital, Indiranagar
+2026-07-19 16:46:08.126 [main] INFO  SearchPage - Hospital Rating: 4.5
+2026-07-19 16:46:08.126 [main] INFO  SearchPage - Rating criteria passed for Motherhood Hospital, Indiranagar
+2026-07-19 16:46:08.249 [main] INFO  SearchPage - Hospital Timing: Open 24 x 7
+2026-07-19 16:46:08.249 [main] INFO  SearchPage - 24x7 availability criteria passed for Motherhood Hospital, Indiranagar
+2026-07-19 16:46:08.653 [main] INFO  SearchPage - Clicked Read More Info button
+2026-07-19 16:46:08.717 [main] DEBUG SearchPage - Amenity Found: Bloodbank
+2026-07-19 16:46:08.785 [main] DEBUG SearchPage - Amenity Found: Diagnostic Lab Service
+2026-07-19 16:46:08.865 [main] DEBUG SearchPage - Amenity Found: Emergency Service
+2026-07-19 16:46:08.956 [main] DEBUG SearchPage - Amenity Found: 24X7 Pharmacy
+2026-07-19 16:46:09.013 [main] DEBUG SearchPage - Amenity Found: Cafeteria
+2026-07-19 16:46:09.156 [main] DEBUG SearchPage - Amenity Found: Parking
+2026-07-19 16:46:09.181 [main] INFO  SearchPage - Parking facility available
+2026-07-19 16:46:09.182 [main] INFO  SearchPage - Verification Result -> Rating: true, Availability: true, Parking: true
+2026-07-19 16:46:09.341 [main] INFO  SearchPage - ------------------------------------------------------
+2026-07-19 16:46:09.342 [main] INFO  SearchPage - Hospital added to filtered list
+2026-07-19 16:46:09.405 [main] INFO  SearchPage - Checking hospital: Sagar Hospitals
+2026-07-19 16:46:12.765 [main] INFO  SearchPage - Opened hospital profile: Motherhood Hospital, Whitefield
+2026-07-19 16:46:12.960 [main] INFO  SearchPage - Hospital Rating: 4.5
+2026-07-19 16:46:12.960 [main] INFO  SearchPage - Rating criteria passed for Motherhood Hospital, Whitefield
+2026-07-19 16:46:13.034 [main] INFO  SearchPage - Hospital Timing: Open 24 x 7
+2026-07-19 16:46:13.034 [main] INFO  SearchPage - 24x7 availability criteria passed for Motherhood Hospital, Whitefield
+2026-07-19 16:46:13.389 [main] INFO  SearchPage - Clicked Read More Info button
+2026-07-19 16:46:13.473 [main] DEBUG SearchPage - Amenity Found: Bloodbank
+2026-07-19 16:46:13.514 [main] DEBUG SearchPage - Amenity Found: Emergency Service
+2026-07-19 16:46:13.554 [main] DEBUG SearchPage - Amenity Found: 24X7 Pharmacy
+2026-07-19 16:46:13.594 [main] DEBUG SearchPage - Amenity Found: Cafeteria
+2026-07-19 16:46:13.635 [main] DEBUG SearchPage - Amenity Found: Parking
+2026-07-19 16:46:13.659 [main] INFO  SearchPage - Parking facility available
+2026-07-19 16:46:13.659 [main] INFO  SearchPage - Verification Result -> Rating: true, Availability: true, Parking: true
+2026-07-19 16:46:13.816 [main] INFO  SearchPage - ------------------------------------------------------
+2026-07-19 16:46:13.816 [main] INFO  SearchPage - Hospital added to filtered list
+2026-07-19 16:46:13.891 [main] INFO  SearchPage - Checking hospital: Apollo Cradle & Children’s Hospital
+2026-07-19 16:46:14.470 [main] INFO  SearchPage - Opened hospital profile: Sagar Hospitals, Banashankari
+2026-07-19 16:46:14.590 [main] INFO  SearchPage - Hospital Rating: 4.0
+2026-07-19 16:46:14.591 [main] INFO  SearchPage - Rating criteria passed for Sagar Hospitals, Banashankari
+2026-07-19 16:46:14.684 [main] INFO  SearchPage - Hospital Timing: Open 24 x 7
+2026-07-19 16:46:14.684 [main] INFO  SearchPage - 24x7 availability criteria passed for Sagar Hospitals, Banashankari
+2026-07-19 16:46:15.126 [main] INFO  SearchPage - Clicked Read More Info button
+2026-07-19 16:46:15.212 [main] DEBUG SearchPage - Amenity Found: Bloodbank
+2026-07-19 16:46:15.265 [main] DEBUG SearchPage - Amenity Found: Emergency Service
+2026-07-19 16:46:15.320 [main] DEBUG SearchPage - Amenity Found: 24X7 Pharmacy
+2026-07-19 16:46:15.370 [main] DEBUG SearchPage - Amenity Found: Cafeteria
+2026-07-19 16:46:15.423 [main] DEBUG SearchPage - Amenity Found: Bank/ATM
+2026-07-19 16:46:15.471 [main] DEBUG SearchPage - Amenity Found: Parking
+2026-07-19 16:46:15.500 [main] INFO  SearchPage - Parking facility available
+2026-07-19 16:46:15.500 [main] INFO  SearchPage - Verification Result -> Rating: true, Availability: true, Parking: true
+2026-07-19 16:46:15.718 [main] INFO  SearchPage - ------------------------------------------------------
+2026-07-19 16:46:15.719 [main] INFO  SearchPage - Hospital added to filtered list
+2026-07-19 16:46:15.803 [main] INFO  SearchPage - Checking hospital: Manipal Hospital
+2026-07-19 16:46:17.898 [main] INFO  SearchPage - Opened hospital profile: Apollo Cradle & Children’s Hospital, Whitefield
+2026-07-19 16:46:18.119 [main] INFO  SearchPage - Hospital Rating: 4.5
+2026-07-19 16:46:18.119 [main] INFO  SearchPage - Rating criteria passed for Apollo Cradle & Children’s Hospital, Whitefield
+2026-07-19 16:46:18.187 [main] INFO  SearchPage - Hospital Timing: Open 24 x 7
+2026-07-19 16:46:18.188 [main] INFO  SearchPage - 24x7 availability criteria passed for Apollo Cradle & Children’s Hospital, Whitefield
+2026-07-19 16:46:18.605 [main] INFO  SearchPage - Clicked Read More Info button
+2026-07-19 16:46:18.695 [main] DEBUG SearchPage - Amenity Found: Emergency Service
+2026-07-19 16:46:18.750 [main] DEBUG SearchPage - Amenity Found: Cafeteria
+2026-07-19 16:46:18.823 [main] DEBUG SearchPage - Amenity Found: Parking
+2026-07-19 16:46:18.859 [main] INFO  SearchPage - Parking facility available
+2026-07-19 16:46:18.860 [main] INFO  SearchPage - Verification Result -> Rating: true, Availability: true, Parking: true
+2026-07-19 16:46:19.024 [main] INFO  SearchPage - ------------------------------------------------------
+2026-07-19 16:46:19.024 [main] INFO  SearchPage - Hospital added to filtered list
+2026-07-19 16:46:19.094 [main] INFO  SearchPage - Checking hospital: Manipal Hospital
+2026-07-19 16:46:21.267 [main] INFO  SearchPage - Opened hospital profile: Manipal Hospital, Hebbal
+2026-07-19 16:46:21.356 [main] INFO  SearchPage - Hospital Rating: 3.5
+2026-07-19 16:46:21.356 [main] INFO  SearchPage - Rating criteria passed for Manipal Hospital, Hebbal
+2026-07-19 16:46:21.493 [main] INFO  SearchPage - Hospital Timing: Open 24 x 7
+2026-07-19 16:46:21.493 [main] INFO  SearchPage - 24x7 availability criteria passed for Manipal Hospital, Hebbal
+2026-07-19 16:46:21.824 [main] INFO  SearchPage - Clicked Read More Info button
+2026-07-19 16:46:21.923 [main] DEBUG SearchPage - Amenity Found: Emergency Service
+2026-07-19 16:46:21.973 [main] DEBUG SearchPage - Amenity Found: 24X7 Pharmacy
+2026-07-19 16:46:22.026 [main] DEBUG SearchPage - Amenity Found: Cafeteria
+2026-07-19 16:46:22.086 [main] DEBUG SearchPage - Amenity Found: Bank/ATM
+2026-07-19 16:46:22.224 [main] DEBUG SearchPage - Amenity Found: Parking
+2026-07-19 16:46:22.254 [main] INFO  SearchPage - Parking facility available
+2026-07-19 16:46:22.255 [main] INFO  SearchPage - Verification Result -> Rating: true, Availability: true, Parking: true
+2026-07-19 16:46:22.491 [main] INFO  SearchPage - ------------------------------------------------------
+2026-07-19 16:46:22.491 [main] INFO  SearchPage - Hospital added to filtered list
+2026-07-19 16:46:22.591 [main] INFO  SearchPage - Checking hospital: Cloudnine Hospital - Old Airport Road
+2026-07-19 16:46:24.407 [main] INFO  SearchPage - Opened hospital profile: Manipal Hospital, Jayanagar 9 Block
+2026-07-19 16:46:24.493 [main] INFO  SearchPage - Hospital Rating: 4.5
+2026-07-19 16:46:24.493 [main] INFO  SearchPage - Rating criteria passed for Manipal Hospital, Jayanagar 9 Block
+2026-07-19 16:46:24.664 [main] INFO  SearchPage - Hospital Timing: Mon - Sun
+2026-07-19 16:46:25.122 [main] INFO  SearchPage - Clicked Read More Info button
+2026-07-19 16:46:25.186 [main] DEBUG SearchPage - Amenity Found: Bloodbank
+2026-07-19 16:46:25.240 [main] DEBUG SearchPage - Amenity Found: Emergency Service
+2026-07-19 16:46:25.298 [main] DEBUG SearchPage - Amenity Found: 24X7 Pharmacy
+2026-07-19 16:46:25.374 [main] DEBUG SearchPage - Amenity Found: Cafeteria
+2026-07-19 16:46:25.452 [main] DEBUG SearchPage - Amenity Found: Bank/ATM
+2026-07-19 16:46:25.517 [main] DEBUG SearchPage - Amenity Found: Parking
+2026-07-19 16:46:25.542 [main] INFO  SearchPage - Parking facility available
+2026-07-19 16:46:25.542 [main] INFO  SearchPage - Verification Result -> Rating: true, Availability: false, Parking: true
+2026-07-19 16:46:25.657 [main] INFO  SearchPage - ------------------------------------------------------
+2026-07-19 16:46:25.657 [main] INFO  SearchPage - Hospitals matching all criteria: 8
+2026-07-19 16:46:25.658 [main] INFO  SearchPage - Hospital Search Completed
+2026-07-19 16:46:43.812 [main] INFO  LabTestPage - LabTestPage page object initialized
+2026-07-19 16:46:43.812 [main] INFO  LabTestPage - Starting to fetch top cities for Lab Tests
+2026-07-19 16:46:43.812 [main] DEBUG LabTestPage - Clicking on 'Lab Tests' element
+2026-07-19 16:46:48.245 [main] INFO  LabTestPage - Successfully clicked 'Lab Tests'
+2026-07-19 16:46:48.245 [main] DEBUG LabTestPage - Fetching all cities list
+2026-07-19 16:46:48.650 [main] INFO  LabTestPage - Found 0 cities
+2026-07-19 16:46:48.650 [main] INFO  LabTestPage - ---City names---
+2026-07-19 16:46:48.650 [main] INFO  LabTestPage - Cities retrieved: 
+2026-07-19 16:47:03.817 [main] INFO  CorporateWellness - CorporateWellness page object initialized
+2026-07-19 16:47:03.817 [main] INFO  CorporateWellness - Starting Corporate Wellness form submission
+2026-07-19 16:47:03.817 [main] DEBUG CorporateWellness - Clicking on 'For Corporates' element
+2026-07-19 16:47:04.122 [main] INFO  CorporateWellness - Successfully clicked 'For Corporates'
+2026-07-19 16:47:04.122 [main] DEBUG CorporateWellness - Clicking on 'Health & Wellness Plans' link
+2026-07-19 16:47:15.396 [main] INFO  CorporateWellness - Successfully clicked 'Health & Wellness Plans'
+2026-07-19 16:47:15.396 [main] DEBUG CorporateWellness - Entering name: Mrunmayee
+2026-07-19 16:47:15.758 [main] INFO  CorporateWellness - Name field filled successfully
+2026-07-19 16:47:15.758 [main] DEBUG CorporateWellness - Entering organization name: Cognizant
+2026-07-19 16:47:16.037 [main] INFO  CorporateWellness - Organization name filled successfully
+2026-07-19 16:47:16.037 [main] DEBUG CorporateWellness - Entering contact number: 90876534231
+2026-07-19 16:47:16.294 [main] INFO  CorporateWellness - Contact number filled successfully
+2026-07-19 16:47:16.294 [main] DEBUG CorporateWellness - Entering official email: xyz@gmail.
+2026-07-19 16:47:16.537 [main] INFO  CorporateWellness - Email field filled successfully
+2026-07-19 16:47:16.537 [main] DEBUG CorporateWellness - Selecting organization size (index 2)
+2026-07-19 16:47:16.926 [main] INFO  CorporateWellness - Organization size selected successfully
+2026-07-19 16:47:16.926 [main] DEBUG CorporateWellness - Selecting interested in: Taking a demo
+2026-07-19 16:47:17.385 [main] INFO  CorporateWellness - 'Interested In' dropdown selected successfully
+2026-07-19 16:47:17.385 [main] DEBUG CorporateWellness - Clicking 'Schedule a demo' button
+2026-07-19 16:47:17.529 [main] INFO  CorporateWellness - 'Schedule a demo' button clicked successfully - Form submission completed
+2026-07-19 16:47:17.537 [main] DEBUG CorporateWellness - Checking phone validation error
+2026-07-19 16:47:17.586 [main] INFO  CorporateWellness - Phone validation error is displayed
+2026-07-19 16:47:17.596 [main] DEBUG CorporateWellness - Checking email validation error
+2026-07-19 16:47:17.653 [main] INFO  CorporateWellness - Email validation error is displayed
+2026-07-19 16:52:02.826 [main] INFO  SearchPage - Starting Hospital Search
+2026-07-19 19:36:14.896 [main] INFO  SearchPage - Starting Hospital Search
+2026-07-19 19:36:21.987 [main] INFO  SearchPage - Entered location: Bangalore
+2026-07-19 19:37:07.528 [main] INFO  LabTestPage - LabTestPage page object initialized
+2026-07-19 19:37:07.528 [main] INFO  LabTestPage - Starting to fetch top cities for Lab Tests
+2026-07-19 19:37:07.528 [main] DEBUG LabTestPage - Clicking on 'Lab Tests' element
+2026-07-19 19:37:10.164 [main] INFO  LabTestPage - Successfully clicked 'Lab Tests'
+2026-07-19 19:37:10.164 [main] DEBUG LabTestPage - Fetching all cities list
+2026-07-19 19:37:10.218 [main] INFO  LabTestPage - Found 8 cities
+2026-07-19 19:37:10.218 [main] INFO  LabTestPage - ---City names---
+2026-07-19 19:37:10.270 [main] DEBUG LabTestPage - City: Bangalore
+2026-07-19 19:37:10.326 [main] DEBUG LabTestPage - City: Delhi
+2026-07-19 19:37:10.385 [main] DEBUG LabTestPage - City: Mumbai
+2026-07-19 19:37:10.467 [main] DEBUG LabTestPage - City: Chennai
+2026-07-19 19:37:10.582 [main] DEBUG LabTestPage - City: Hyderabad
+2026-07-19 19:37:10.680 [main] DEBUG LabTestPage - City: Kolkata
+2026-07-19 19:37:10.730 [main] DEBUG LabTestPage - City: Pune
+2026-07-19 19:37:10.771 [main] DEBUG LabTestPage - City: Ahmedabad
+2026-07-19 19:37:10.771 [main] INFO  LabTestPage - Cities retrieved: Bangalore Delhi Mumbai Chennai Hyderabad Kolkata Pune Ahmedabad 
+2026-07-19 19:37:23.630 [main] INFO  CorporateWellness - CorporateWellness page object initialized
+2026-07-19 19:37:23.630 [main] INFO  CorporateWellness - Starting Corporate Wellness form submission
+2026-07-19 19:37:23.630 [main] DEBUG CorporateWellness - Clicking on 'For Corporates' element
+2026-07-19 19:37:23.936 [main] INFO  CorporateWellness - Successfully clicked 'For Corporates'
+2026-07-19 19:37:23.936 [main] DEBUG CorporateWellness - Clicking on 'Health & Wellness Plans' link
+2026-07-19 19:37:29.201 [main] INFO  CorporateWellness - Successfully clicked 'Health & Wellness Plans'
+2026-07-19 19:37:29.201 [main] DEBUG CorporateWellness - Entering name: Mrunmayee
+2026-07-19 19:37:29.555 [main] INFO  CorporateWellness - Name field filled successfully
+2026-07-19 19:37:29.555 [main] DEBUG CorporateWellness - Entering organization name: Cognizant
+2026-07-19 19:37:29.851 [main] INFO  CorporateWellness - Organization name filled successfully
+2026-07-19 19:37:29.851 [main] DEBUG CorporateWellness - Entering contact number: 90876534231
+2026-07-19 19:37:30.978 [main] INFO  CorporateWellness - Contact number filled successfully
+2026-07-19 19:37:30.979 [main] DEBUG CorporateWellness - Entering official email: xyz@gmail.
+2026-07-19 19:37:31.211 [main] INFO  CorporateWellness - Email field filled successfully
+2026-07-19 19:37:31.212 [main] DEBUG CorporateWellness - Selecting organization size (index 2)
+2026-07-19 19:37:31.839 [main] INFO  CorporateWellness - Organization size selected successfully
+2026-07-19 19:37:31.840 [main] DEBUG CorporateWellness - Selecting interested in: Taking a demo
+2026-07-19 19:37:32.572 [main] INFO  CorporateWellness - 'Interested In' dropdown selected successfully
+2026-07-19 19:37:32.573 [main] DEBUG CorporateWellness - Clicking 'Schedule a demo' button
+2026-07-19 19:37:32.783 [main] INFO  CorporateWellness - 'Schedule a demo' button clicked successfully - Form submission completed
+2026-07-19 19:37:32.783 [main] DEBUG CorporateWellness - Checking phone validation error
+2026-07-19 19:37:32.839 [main] INFO  CorporateWellness - Phone validation error is displayed
+2026-07-19 19:37:32.841 [main] DEBUG CorporateWellness - Checking email validation error
+2026-07-19 19:37:32.884 [main] INFO  CorporateWellness - Email validation error is displayed
