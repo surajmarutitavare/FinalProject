@@ -36,8 +36,6 @@
 //}
 
 
-
-
 package base;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -48,7 +46,8 @@ import org.testng.annotations.*;
 
 import reports.ExtentManager;
 import reports.ExtentTestManager;
-import utils.DriverSetup;
+import utils.ConfigReader;
+import utils.DriverFactory;
 import utils.ScreenshotUtils;
 
 public class BaseTest {
@@ -65,69 +64,42 @@ public class BaseTest {
 
     @BeforeMethod
     public void setUp() {
-
-        driver = DriverSetup.getDriver("chrome");
-
+        String browser = ConfigReader.getProperty("browser");
+        driver = DriverFactory.getDriver(browser);
         driver.manage().window().maximize();
+        String url = ConfigReader.getProperty("url");
+        driver.get(url);
 
-        driver.get("https://www.practo.com");
     }
 
     @AfterMethod
     public void tearDown(ITestResult result) {
 
-        String testName =
-                result.getMethod().getMethodName();
+        String testName = result.getMethod().getMethodName();
 
         String screenshotPath =
-                ScreenshotUtils.captureScreenshot(
-                        driver,
-                        testName
-                );
+                ScreenshotUtils.captureScreenshot(driver, testName);
 
-        if(result.getStatus()==ITestResult.SUCCESS){
+        if (result.getStatus() == ITestResult.SUCCESS) {
+            ExtentTestManager.test.log(Status.PASS, "Test Passed").addScreenCaptureFromPath(screenshotPath);
+        } else if (result.getStatus() == ITestResult.FAILURE) {
 
-            ExtentTestManager.test.log(
-                    Status.PASS,
-                    "Test Passed"
-            ).addScreenCaptureFromPath(screenshotPath);
-        }
-
-        else if(result.getStatus()==ITestResult.FAILURE){
-
-            ExtentTestManager.test.log(
-                    Status.FAIL,
-                    result.getThrowable()
-            );
+            ExtentTestManager.test.log(Status.FAIL, result.getThrowable());
 
             try {
-
-                ExtentTestManager.test
-                        .addScreenCaptureFromPath(
-                                screenshotPath
-                        );
-
-            } catch(Exception e){
-
+                ExtentTestManager.test.addScreenCaptureFromPath(screenshotPath);
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
 
-        else if(result.getStatus()==ITestResult.SKIP){
-
-            ExtentTestManager.test.log(
-                    Status.SKIP,
-                    "Test Skipped"
-            );
-        }
-
-        if(driver!=null){
+        if (driver != null) {
             driver.quit();
         }
     }
 
     @AfterSuite
-    public void flushReport(){
+    public void flushReport() {
 
         extent.flush();
     }

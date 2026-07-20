@@ -5,11 +5,17 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import reports.ExtentTestManager;
 import utils.ScreenshotUtils;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.List;
 
 public class LabTestPage {
     WebDriver driver;
+    private static final Logger logger =
+
+            LogManager.getLogger(LabTestPage.class);
+
 
     public LabTestPage(WebDriver driver) {
         this.driver = driver;
@@ -18,48 +24,40 @@ public class LabTestPage {
     By labTestsElement = By.xpath("//a/child::div[contains(text(),'Lab Tests')]");
     By CitiesElement = By.xpath("//ul//li[@class='u-text--center']");
 
-//    public void topCities() {
-//        WebElement labTests = driver.findElement(labTestsElement);
-//        labTests.click();
-//
-//        List<WebElement> Cities = driver.findElements(CitiesElement);
-////
-//        System.out.println("---City names---");
-//        for (WebElement i : Cities) {
-//            System.out.print(i.getText() + " ");
-//        }
-//
-//        System.out.println();
 
-    /// /        ScreenshotUtils.captureScreenshot(driver);
-    /// /
-    /// /        driver.navigate().back();
-//    }
     public void topCities() {
+        try {
+            ExtentTestManager.test.info(
+                    "Opening Lab Tests Section"
+            );
+            logger.info("Opening Lab Tests Section");
+            WebElement labTests =
+                    driver.findElement(labTestsElement);
 
-        ExtentTestManager.test.info(
-                "Opening Lab Tests Section"
-        );
+            labTests.click();
 
-        WebElement labTests =
-                driver.findElement(labTestsElement);
-
-        labTests.click();
-
-        List<WebElement> cities =
-                driver.findElements(CitiesElement);
-
-        ExtentTestManager.test.info(
-                "Total Cities Found : "
-                        + cities.size()
-        );
-
-        for (WebElement city : cities) {
+            List<WebElement> cities =
+                    driver.findElements(CitiesElement);
 
             ExtentTestManager.test.info(
-                    "City : "
-                            + city.getText()
+                    "Total Cities Found : "
+                            + cities.size()
             );
+            logger.info("Total Cities Found : {}", cities.size());
+
+            for (WebElement city : cities) {
+                logger.info("City : {}", city.getText());
+                ExtentTestManager.test.info(
+                        "City : "
+                                + city.getText()
+                );
+            }
+        } catch (Exception e) {
+            logger.error("Error occurred in topCities()", e);
+
+            ExtentTestManager.test.fail(
+                    "Error in topCities() : " + e.getMessage());
+
         }
     }
 }

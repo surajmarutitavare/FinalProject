@@ -1,6 +1,8 @@
 package utils;
 
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.*;
 import org.openqa.selenium.io.FileHandler;
 
@@ -10,7 +12,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class ScreenshotUtils {
-
+    private static final Logger logger = LogManager.getLogger(ScreenshotUtils.class);
 
 
     // Method to capture screenshot and return file path
@@ -37,10 +39,12 @@ public class ScreenshotUtils {
 
             // Copy screenshot from source to destination
             FileHandler.copy(src, dest);
+            logger.info("Screenshot saved successfully : {}", path);
+
         } catch (IOException e) {
             // Handle error during file cop
-            System.out.println("Error while taking screenshot: " + e.getMessage());
-        }
+            logger.error("Error while taking screenshot", e);
+                    }
         // Return the saved screenshot path
         return path;
     }

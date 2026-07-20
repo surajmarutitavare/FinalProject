@@ -8,11 +8,16 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import reports.ExtentTestManager;
 import utils.ScreenshotUtils;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.time.Duration;
 
 public class CorporateWellness {
     WebDriver driver;
+    private static final Logger logger =
+
+            LogManager.getLogger(CorporateWellness.class);
 
     public CorporateWellness(WebDriver driver) {
         this.driver = driver;
@@ -29,112 +34,115 @@ public class CorporateWellness {
     By scheduleDemoElement = By.xpath("//button[contains(text(),'Schedule a demo')]");
 
 
-//    public boolean isPhoneValidationDisplayed() {
-//
-//        WebElement contactNumberField =
-//                driver.findElement(contactNumberElement);
-//
-//        String classValue =
-//                contactNumberField.getAttribute("class");
-//
-//        return classValue.contains("error");
-//    }
-
 
     public boolean isPhoneValidationDisplayed() {
+
         boolean result =
-                driver.findElement(contactNumberElement).getAttribute("class").contains("error");
+                driver.findElement(contactNumberElement)
+                        .getAttribute("class")
+                        .contains("error");
 
         if (result) {
+            logger.info("Phone validation displayed");
             ExtentTestManager.test.pass("Phone validation displayed");
         } else {
+            logger.warn("Phone validation not displayed");
             ExtentTestManager.test.fail("Phone validation not displayed");
         }
+
         return result;
     }
 
-
-//    public boolean isEmailValidationDisplayed() {
-//
-//        WebElement emailField =
-//                driver.findElement(officialEmailIdElement);
-//        String classValue =
-//                emailField.getAttribute("class");
-//        return classValue.contains("error");
-//    }
 
 
 
     public boolean isEmailValidationDisplayed() {
 
         boolean result =
-                driver.findElement(officialEmailIdElement).getAttribute("class").contains("error");
+                driver.findElement(officialEmailIdElement)
+                        .getAttribute("class")
+                        .contains("error");
 
-        if(result){
+        if (result) {
+            logger.info("Email validation displayed");
             ExtentTestManager.test.pass("Email validation displayed");
-
         } else {
+            logger.warn("Email validation not displayed");
             ExtentTestManager.test.fail("Email validation not displayed");
         }
+
         return result;
     }
 
     public void formDetails() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        try {
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 
-        WebElement corporate = wait.until(ExpectedConditions.visibilityOfElementLocated(corporateElement));
-        corporate.click();
-        ExtentTestManager.test.info("Opening Corporate Wellness Form");
+            WebElement corporate = wait.until(ExpectedConditions.visibilityOfElementLocated(corporateElement));
+            corporate.click();
+            ExtentTestManager.test.info("Opening Corporate Wellness Form");
+            logger.info("Opening Corporate Wellness Form");
 
-        WebElement corporateWellness = driver.findElement(corporateWellnessElement);
-        corporateWellness.click();
+            WebElement corporateWellness = driver.findElement(corporateWellnessElement);
+            corporateWellness.click();
 
 
-        WebElement name = wait.until(ExpectedConditions.visibilityOfElementLocated(nameElement));
-        name.click();
-        name.sendKeys("Mrunmayee");
-        ExtentTestManager.test.info(
-                "Entered Name : Mrunmayee"
-        );
+            WebElement name = wait.until(ExpectedConditions.visibilityOfElementLocated(nameElement));
+            name.click();
+            name.sendKeys("Mrunmayee");
+            ExtentTestManager.test.info(
+                    "Entered Name : Mrunmayee"
+            );
+            logger.info("Entered Name : Mrunmayee");
 
-        WebElement organizationName = driver.findElement(organizationNameElement);
-        organizationName.sendKeys("Cognizant");
-        ExtentTestManager.test.info(
-                "Entered Organization : Cognizant"
-        );
+            WebElement organizationName = driver.findElement(organizationNameElement);
+            organizationName.sendKeys("Cognizant");
+            ExtentTestManager.test.info(
+                    "Entered Organization : Cognizant"
+            );
+            logger.info("Entered Organization : Cognizant");
 
-        WebElement contactNumber = driver.findElement(contactNumberElement);
-        contactNumber.sendKeys("90876534231");
-        ExtentTestManager.test.info(
-                "Entered Invalid Phone");
+            WebElement contactNumber = driver.findElement(contactNumberElement);
+            contactNumber.sendKeys("90876534231");
+            ExtentTestManager.test.info(
+                    "Entered Invalid Phone");
+            logger.info("Entered Invalid Phone Number");
 //
 
-        WebElement officialEmailId = driver.findElement(officialEmailIdElement);
-        officialEmailId.sendKeys("xyz@gmail.");
-        ExtentTestManager.test.info(
-                "Entered Invalid Email");
+            WebElement officialEmailId = driver.findElement(officialEmailIdElement);
+            officialEmailId.sendKeys("xyz@gmail.");
+            ExtentTestManager.test.info(
+                    "Entered Invalid Email");
+            logger.info("Entered Invalid Email Address");
 
 
-        WebElement organizationSize = driver.findElement(organizationSizeElemet);
-        organizationSize.click();
-        Select select = new Select(organizationSize);
-        select.selectByIndex(2);
-        ExtentTestManager.test.info(
-                "Selected Organization Size"
-        );
+            WebElement organizationSize = driver.findElement(organizationSizeElemet);
+            organizationSize.click();
+            Select select = new Select(organizationSize);
+            select.selectByIndex(2);
+            ExtentTestManager.test.info(
+                    "Selected Organization Size"
+            );
+            logger.info("Selected Organization Size");
+            WebElement interestedInButton = driver.findElement(interestedInButtonElement);
+            interestedInButton.click();
+            Select select1 = new Select(interestedInButton);
+            select1.selectByVisibleText("Taking a demo");
+            ExtentTestManager.test.info(
+                    "Selected Taking a Demo"
+            );
+            logger.info("Selected Taking a Demo Option");
 
-        WebElement interestedInButton = driver.findElement(interestedInButtonElement);
-        interestedInButton.click();
-        Select select1 = new Select(interestedInButton);
-        select1.selectByVisibleText("Taking a demo");
-        ExtentTestManager.test.info(
-                "Selected Taking a Demo"
-        );
+            ExtentTestManager.test.info("Submitting Form");
+            logger.info("Submitting Corporate Wellness Form");
+            WebElement scheduleDemo = driver.findElement(scheduleDemoElement);
+            scheduleDemo.click();
+        } catch (Exception e) {
+            logger.error("Error occurred in formDetails()", e);
 
-        ExtentTestManager.test.info("Submitting Form");
-        WebElement scheduleDemo = driver.findElement(scheduleDemoElement);
-        scheduleDemo.click();
-
+            ExtentTestManager.test.fail(
+                    "Error in formDetails() : " + e.getMessage());
+        }
 
     }
 }
