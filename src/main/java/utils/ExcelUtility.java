@@ -107,8 +107,8 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelUtility {
 
-    private static final String FILE_PATH =
-            System.getProperty("user.dir") + "/src/main/resources/test.xlsx";
+    private static final String FILE_PATH = System.getProperty("user.dir") + ConfigReader.getProperty("excelPath");
+    //            System.getProperty("user.dir") + "/src/main/resources/test.xlsx";
 
     private static final String SHEET_NAME = "Sheet1";
 
