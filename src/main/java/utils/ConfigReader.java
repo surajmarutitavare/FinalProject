@@ -1,34 +1,3 @@
-//package utils;
-//
-//import java.io.FileInputStream;
-//import java.util.Properties;
-//
-//public class ConfigReader {
-//    static Properties prop;
-//
-//    static {
-//        try {
-//            String path = System.getProperty("user.dir") + "/src/test/resources/config.properties";
-//            FileInputStream fis = new FileInputStream(path);
-//            prop = new Properties();
-//            prop.load(fis);
-//        } catch (Exception e) {
-//            System.out.println("Error loading config file " + e.getMessage());
-//        }
-//    }
-//
-//    public static String getProperty(String key) {
-//        return prop.getProperty(key);
-//    }
-//}
-
-
-
-
-
-
-
-
 
 
 package utils;
@@ -51,9 +20,10 @@ public class ConfigReader {
             logger.info("Loading config.properties file");
 
             prop = new Properties();
+            String path = System.getProperty("user.dir") + "/src/main/resources/config.properties";
 
             FileInputStream fis =
-                    new FileInputStream("src/main/resources/config.properties");
+                    new FileInputStream(path);
 
             prop.load(fis);
 

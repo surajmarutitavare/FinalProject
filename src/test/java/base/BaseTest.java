@@ -40,6 +40,7 @@ package base;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.Status;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
@@ -69,6 +70,11 @@ public class BaseTest {
         driver.manage().window().maximize();
         String url = ConfigReader.getProperty("url");
         driver.get(url);
+        String title = "Internet Security by Zscaler";
+        String pageTitle = driver.getTitle();
+        if (pageTitle.equalsIgnoreCase(title)) {
+            driver.findElement(By.xpath("//input[@class='btn']")).click();
+        }
 
     }
 

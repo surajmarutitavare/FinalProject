@@ -31,15 +31,7 @@ public class PractoTest extends BaseTest {
         System.out.println("========== Test Class Started ==========");
     }
 
-//    @Test(priority = 1)
-//    public void verifyHospitalSearch() {
-//
-//        searchPage = new SearchPage(driver);
-//
-//        searchPage.searchHospital();
-//
-//        System.out.println("Hospital Search Completed");
-//    }
+
 @Test(priority=1)
 public void verifyHospitalSearch() {
 
@@ -61,16 +53,6 @@ public void verifyHospitalSearch() {
     );
 }
 
-
-//    @Test(priority = 2)
-//    public void verifyTopCities() {
-//
-//        labTestPage = new LabTestPage(driver);
-//
-//        labTestPage.topCities();
-//
-//        System.out.println("Top Cities Retrieved Successfully");
-//    }
 
 
     @Test(priority=2)
@@ -96,25 +78,6 @@ public void verifyHospitalSearch() {
 
 
 
-//    @Test(priority = 3)
-//    public void validateCorporateWellnessForm() {
-//
-//        corporateWellness = new CorporateWellness(driver);
-//
-//        corporateWellness.formDetails();
-//
-//        Assert.assertTrue(
-//                corporateWellness.isPhoneValidationDisplayed(),
-//                "Phone validation message not displayed"
-//        );
-//
-//        Assert.assertTrue(
-//                corporateWellness.isEmailValidationDisplayed(),
-//                "Email validation message not displayed"
-//        );
-//
-//        System.out.println("Corporate Wellness Validation Successful");
-//    }
 
     @Test(priority=3)
     public void validateCorporateWellnessForm() {
