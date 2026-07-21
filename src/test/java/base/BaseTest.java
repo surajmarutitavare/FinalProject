@@ -42,6 +42,8 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.Status;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
 
@@ -51,6 +53,8 @@ import utils.ConfigReader;
 import utils.DriverFactory;
 import utils.ScreenshotUtils;
 
+import java.time.Duration;
+
 public class BaseTest {
 
     protected WebDriver driver;
@@ -59,7 +63,7 @@ public class BaseTest {
 
     @BeforeSuite
     public void startReport() {
-
+        System.out.println("========== Test Suite Started ==========");
         extent = ExtentManager.getInstance();
     }
 
@@ -70,12 +74,16 @@ public class BaseTest {
         driver.manage().window().maximize();
         String url = ConfigReader.getProperty("url");
         driver.get(url);
-        String title = "Internet Security by Zscaler";
-        String pageTitle = driver.getTitle();
-        if (pageTitle.equalsIgnoreCase(title)) {
-            driver.findElement(By.xpath("//input[@class='btn']")).click();
-        }
 
+        WebDriverWait wait =
+                new WebDriverWait(driver, Duration.ofSeconds(10));
+
+        if (driver.getTitle().equalsIgnoreCase("Internet Security by Zscaler")) {
+
+            wait.until(ExpectedConditions.elementToBeClickable(
+                            By.xpath("//input[@class='btn']")))
+                    .click();
+        }
     }
 
     @AfterMethod

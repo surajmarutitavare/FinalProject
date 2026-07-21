@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import reports.ExtentTestManager;
+import utils.ConfigReader;
 import utils.ScreenshotUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -34,7 +35,6 @@ public class CorporateWellness {
     By scheduleDemoElement = By.xpath("//button[contains(text(),'Schedule a demo')]");
 
 
-
     public boolean isPhoneValidationDisplayed() {
 
         boolean result =
@@ -52,8 +52,6 @@ public class CorporateWellness {
 
         return result;
     }
-
-
 
 
     public boolean isEmailValidationDisplayed() {
@@ -76,6 +74,12 @@ public class CorporateWellness {
 
     public void formDetails() {
         try {
+
+            String TestDataName = ConfigReader.getProperty("name");
+            String TestDataOrganization = ConfigReader.getProperty("organization");
+            String TestDataContactNUmber =  ConfigReader.getProperty("contactNumber");
+            String TestDataEmail = ConfigReader.getProperty("emailId");
+            System.out.println("tst------------>"+TestDataName);
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 
             WebElement corporate = wait.until(ExpectedConditions.visibilityOfElementLocated(corporateElement));
@@ -89,28 +93,30 @@ public class CorporateWellness {
 
             WebElement name = wait.until(ExpectedConditions.visibilityOfElementLocated(nameElement));
             name.click();
-            name.sendKeys("Mrunmayee");
+
+            name.sendKeys(TestDataName);
             ExtentTestManager.test.info(
-                    "Entered Name : Mrunmayee"
+                    "Entered Name :"+ TestDataName
             );
-            logger.info("Entered Name : Mrunmayee");
+            logger.info("Entered Name : {}",TestDataName);
 
             WebElement organizationName = driver.findElement(organizationNameElement);
-            organizationName.sendKeys("Cognizant");
+
+            organizationName.sendKeys(TestDataOrganization);
             ExtentTestManager.test.info(
-                    "Entered Organization : Cognizant"
+                    "Entered Organization {}:"+ TestDataOrganization
             );
-            logger.info("Entered Organization : Cognizant");
+            logger.info("Entered Organization :{}", TestDataOrganization);
 
             WebElement contactNumber = driver.findElement(contactNumberElement);
-            contactNumber.sendKeys("90876534231");
+            contactNumber.sendKeys(TestDataContactNUmber);
             ExtentTestManager.test.info(
                     "Entered Invalid Phone");
             logger.info("Entered Invalid Phone Number");
 //
 
             WebElement officialEmailId = driver.findElement(officialEmailIdElement);
-            officialEmailId.sendKeys("xyz@gmail.");
+            officialEmailId.sendKeys(TestDataEmail);
             ExtentTestManager.test.info(
                     "Entered Invalid Email");
             logger.info("Entered Invalid Email Address");

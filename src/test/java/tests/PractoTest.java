@@ -1,6 +1,7 @@
 package tests;
 
 import base.BaseTest;
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterSuite;
@@ -19,11 +20,7 @@ public class PractoTest extends BaseTest {
     private LabTestPage labTestPage;
     private CorporateWellness corporateWellness;
 
-    @BeforeSuite
-    public void beforeSuite() {
 
-        System.out.println("========== Test Suite Started ==========");
-    }
 
     @BeforeClass
     public void beforeClass() {
@@ -31,31 +28,48 @@ public class PractoTest extends BaseTest {
         System.out.println("========== Test Class Started ==========");
     }
 
+    @Test(priority = 1)
+    public void verifyUrl() {
 
-@Test(priority=1)
-public void verifyHospitalSearch() {
+        ExtentTestManager.test =
+                extent.createTest("Verify URL");
 
-    ExtentTestManager.test =
-            extent.createTest(
-                    "Verify Hospital Search"
-            );
+        String expectedTitle =
+                "Practo | Video Consultation with Doctors, Book Doctor Appointments, Order Medicine, Diagnostic Tests";
 
-    searchPage = new SearchPage(driver);
+        String actualTitle = driver.getTitle();
 
-    ExtentTestManager.test.info(
-            "Searching Hospital in Bangalore"
-    );
+        ExtentTestManager.test.info("Verifying page title");
 
-    searchPage.searchHospital();
+        Assert.assertNotNull(actualTitle);
+        Assert.assertEquals(actualTitle.trim(), expectedTitle);
 
-    ExtentTestManager.test.pass(
-            "Hospital Search Completed"
-    );
-}
+        ExtentTestManager.test.pass("Title verified successfully");
+    }
+
+    @Test(priority = 2)
+    public void verifyHospitalSearch() {
+
+        ExtentTestManager.test =
+                extent.createTest(
+                        "Verify Hospital Search"
+                );
+
+        searchPage = new SearchPage(driver);
+
+        ExtentTestManager.test.info(
+                "Searching Hospital in Bangalore"
+        );
+
+        searchPage.searchHospital();
+
+        ExtentTestManager.test.pass(
+                "Hospital Search Completed"
+        );
+    }
 
 
-
-    @Test(priority=2)
+    @Test(priority = 3)
     public void verifyTopCities() {
 
         ExtentTestManager.test =
@@ -77,9 +91,7 @@ public void verifyHospitalSearch() {
     }
 
 
-
-
-    @Test(priority=3)
+    @Test(priority = 4)
     public void validateCorporateWellnessForm() {
 
         ExtentTestManager.test =
