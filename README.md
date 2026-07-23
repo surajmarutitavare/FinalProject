@@ -54,20 +54,6 @@ emailId=your@email.com
 
 ---
 
-## How to Run Tests
-
-### Run All Tests
-```bash
-mvn test
-```
-
-### Run Specific Test
-```bash
-mvn test -Dtest=PractoTest
-```
-
----
-
 ## Where Are Results?
 
 After tests finish, open:
@@ -123,27 +109,6 @@ Tests run in this order:
 
 ---
 
-## Common Problems & Solutions
-
-| Problem | Solution |
-|---------|----------|
-| Java not found | Install Java JDK 21 |
-| Maven not found | Install Maven |
-| Tests don't run | Check config.properties has correct URL |
-| Browser won't open | Make sure `browser=chrome` in config.properties |
-| Report not generated | Create `Reports/` folder manually |
-
----
-
-## Quick Checklist
-
-- [ ] Java installed
-- [ ] Maven installed
-- [ ] config.properties updated
-- [ ] Internet connected
-- [ ] Reports folder created
-
----
 
 ## Run Your First Test
 
