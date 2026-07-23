@@ -63,7 +63,6 @@
 //}
 
 
-
 package pages;
 
 import org.openqa.selenium.WebDriver;
@@ -71,11 +70,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import reports.ExtentTestManager;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.time.Duration;
 import java.util.List;
 
 public class LabTestPage {
@@ -93,15 +95,19 @@ public class LabTestPage {
     // Page Factory Elements
 
     @FindBy(xpath = "//a/child::div[contains(text(),'Lab Tests')]")
-      WebElement labTests;
+    WebElement labTests;
 
     @FindBy(xpath = "//ul//li[@class='u-text--center']")
-      List<WebElement> cities;
+    List<WebElement> cities;
+
+    @FindBy(xpath = "//div[@class='u-bg--white u-marginb--std']")
+    WebElement topCityDiv;
+
 
     public void topCities() {
 
         try {
-
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
             ExtentTestManager.test.info(
                     "Opening Lab Tests Section"
             );
@@ -109,6 +115,8 @@ public class LabTestPage {
             logger.info("Opening Lab Tests Section");
 
             labTests.click();
+
+            wait.until(ExpectedConditions.visibilityOf(topCityDiv));
 
             ExtentTestManager.test.info(
                     "Total Cities Found : " + cities.size()

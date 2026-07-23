@@ -245,6 +245,7 @@ import java.util.Set;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import utils.ScreenshotUtils;
 
 public class SearchPage {
 
@@ -478,6 +479,7 @@ public class SearchPage {
                             selectHospital));
 
             selectHospital.click();
+//            ScreenshotUtils.captureScreenshot(driver, "Search_page");
 
             ExtentTestManager.test.info(
                     "Hospital Search Started");

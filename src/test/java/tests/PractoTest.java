@@ -28,6 +28,7 @@ public class PractoTest extends BaseTest {
         System.out.println("========== Test Class Started ==========");
     }
 
+
     @Test(priority = 1)
     public void verifyUrl() {
 

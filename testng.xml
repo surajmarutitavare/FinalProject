@@ -2,9 +2,7 @@
     <test name="Practo Tests">
         <classes>
             <class name="tests.PractoTest"/>
-<!--            <class name="tests.SearchHospitalTest"/>-->
-<!--            <class name="tests.LabTestTest"/>-->
-<!--            <class name="tests.CorporateWellnessTest"/>-->
+
         </classes>
     </test>
 </suite>
