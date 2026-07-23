@@ -559,3 +559,191 @@ Session ID: ffe1618f2cf8a55feaab17031d2a7d20
 	at org.testng.TestNG.run(TestNG.java:1079)
 	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
 	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+2026-07-23 12:00:06 INFO  [ConfigReader] - Loading config.properties file
+2026-07-23 12:00:06 INFO  [ConfigReader] - Configuration loaded successfully
+2026-07-23 12:00:06 INFO  [ConfigReader] - Property Read : browser = chrome
+2026-07-23 12:00:06 INFO  [DriverFactory] - Requested Browser : chrome
+2026-07-23 12:00:06 INFO  [DriverFactory] - Launching Chrome Browser
+2026-07-23 12:00:14 ERROR [DriverFactory] - Error while launching browser
+org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: Chrome instance exited. Examine ChromeDriver verbose log to determine the cause. 
+Host info: host: 'LTIN707777', ip: '10.75.195.15'
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [], binary: C:\Program Files\Google\Chr..., extensions: []}}]}]
+Capabilities {browserName: chrome, goog:chromeOptions: {args: [], binary: C:\Program Files\Google\Chr..., extensions: []}}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:115)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:76)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:62)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:217)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:284)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:217)
+	at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:114)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:92)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:87)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:51)
+	at utils.DriverFactory.getDriver(DriverFactory.java:30)
+	at base.BaseTest.setUp(BaseTest.java:37)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:846)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:611)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+2026-07-23 12:02:10 INFO  [ConfigReader] - Loading config.properties file
+2026-07-23 12:02:10 INFO  [ConfigReader] - Configuration loaded successfully
+2026-07-23 12:02:10 INFO  [ConfigReader] - Property Read : browser = chrome
+2026-07-23 12:02:10 INFO  [DriverFactory] - Requested Browser : chrome
+2026-07-23 12:02:10 INFO  [DriverFactory] - Launching Chrome Browser
+2026-07-23 12:02:39 INFO  [DriverFactory] - Chrome Browser Launched Successfully
+2026-07-23 12:02:39 INFO  [ConfigReader] - Property Read : url = https://www.practo.com/
+2026-07-23 12:02:45 INFO  [ScreenshotUtils] - Screenshot saved successfully : C:\Users\2505159\OneDrive - Cognizant\Desktop\FinalProject/screenshots/verifyUrl_20260723_120245.png
+2026-07-23 12:02:49 INFO  [ConfigReader] - Property Read : browser = chrome
+2026-07-23 12:02:49 INFO  [DriverFactory] - Requested Browser : chrome
+2026-07-23 12:02:49 INFO  [DriverFactory] - Launching Chrome Browser
+2026-07-23 12:02:59 INFO  [DriverFactory] - Chrome Browser Launched Successfully
+2026-07-23 12:02:59 INFO  [ConfigReader] - Property Read : url = https://www.practo.com/
+2026-07-23 12:03:24 INFO  [SearchPage] - Total Hospitals Found : 10
+2026-07-23 12:03:25 INFO  [SearchPage] - Hospital Found : Manipal Hospital Varthur Road (formerly Columbia Asia Hospital)
+2026-07-23 12:03:54 INFO  [SearchPage] - Hospital Rating : 4.0
+2026-07-23 12:03:54 INFO  [SearchPage] - Hospital Rating above 3.5 : Manipal Hospital Varthur Road (formerly Columbia Asia Hospital)
+2026-07-23 12:03:54 INFO  [SearchPage] - Hospital Timing : Open 24 x 7
+2026-07-23 12:03:54 INFO  [SearchPage] - Hospital Available 24x7 : Manipal Hospital Varthur Road (formerly Columbia Asia Hospital)
+2026-07-23 12:03:55 INFO  [SearchPage] - Amenity Found : Parking
+2026-07-23 12:03:55 INFO  [SearchPage] - ------------------------------------------------------------
+2026-07-23 12:03:55 INFO  [SearchPage] - Hospital Found : Manipal Hospitals
+2026-07-23 12:04:29 INFO  [SearchPage] - Hospital Rating : 4.5
+2026-07-23 12:04:29 INFO  [SearchPage] - Hospital Rating above 3.5 : Manipal Hospitals
+2026-07-23 12:04:29 INFO  [SearchPage] - Hospital Timing : Open 24 x 7
+2026-07-23 12:04:29 INFO  [SearchPage] - Hospital Available 24x7 : Manipal Hospitals
+2026-07-23 12:04:29 INFO  [SearchPage] - Amenity Found : Parking
+2026-07-23 12:04:29 INFO  [SearchPage] - ------------------------------------------------------------
+2026-07-23 12:04:29 INFO  [SearchPage] - Hospital Found : Koshys Hospital
+2026-07-23 12:04:33 INFO  [SearchPage] - Hospital Rating : 4.0
+2026-07-23 12:04:33 INFO  [SearchPage] - Hospital Rating above 3.5 : Koshys Hospital
+2026-07-23 12:04:33 INFO  [SearchPage] - Hospital Timing : Open 24 x 7
+2026-07-23 12:04:33 INFO  [SearchPage] - Hospital Available 24x7 : Koshys Hospital
+2026-07-23 12:04:33 INFO  [SearchPage] - Amenity Found : Parking
+2026-07-23 12:04:33 INFO  [SearchPage] - ------------------------------------------------------------
+2026-07-23 12:04:33 INFO  [SearchPage] - Hospital Found : Motherhood Hospital
+2026-07-23 12:04:52 INFO  [SearchPage] - Hospital Rating : 4.5
+2026-07-23 12:04:52 INFO  [SearchPage] - Hospital Rating above 3.5 : Motherhood Hospital
+2026-07-23 12:04:52 INFO  [SearchPage] - Hospital Timing : Open 24 x 7
+2026-07-23 12:04:52 INFO  [SearchPage] - Hospital Available 24x7 : Motherhood Hospital
+2026-07-23 12:04:52 INFO  [SearchPage] - Amenity Found : Parking
+2026-07-23 12:04:52 INFO  [SearchPage] - ------------------------------------------------------------
+2026-07-23 12:04:53 INFO  [SearchPage] - Hospital Found : Motherhood Hospital
+2026-07-23 12:05:21 INFO  [SearchPage] - Hospital Rating : 4.5
+2026-07-23 12:05:21 INFO  [SearchPage] - Hospital Rating above 3.5 : Motherhood Hospital
+2026-07-23 12:05:21 INFO  [SearchPage] - Hospital Timing : Open 24 x 7
+2026-07-23 12:05:21 INFO  [SearchPage] - Hospital Available 24x7 : Motherhood Hospital
+2026-07-23 12:05:21 INFO  [SearchPage] - Amenity Found : Parking
+2026-07-23 12:05:22 INFO  [SearchPage] - ------------------------------------------------------------
+2026-07-23 12:05:22 INFO  [SearchPage] - Hospital Found : Sagar Hospitals
+2026-07-23 12:05:32 INFO  [SearchPage] - Hospital Rating : 4.0
+2026-07-23 12:05:32 INFO  [SearchPage] - Hospital Rating above 3.5 : Sagar Hospitals
+2026-07-23 12:05:33 INFO  [SearchPage] - Hospital Timing : Open 24 x 7
+2026-07-23 12:05:33 INFO  [SearchPage] - Hospital Available 24x7 : Sagar Hospitals
+2026-07-23 12:05:33 INFO  [SearchPage] - Amenity Found : Parking
+2026-07-23 12:05:33 INFO  [SearchPage] - ------------------------------------------------------------
+2026-07-23 12:05:33 INFO  [SearchPage] - Hospital Found : Apollo Cradle & Children’s Hospital
+2026-07-23 12:05:37 INFO  [SearchPage] - Hospital Rating : 4.5
+2026-07-23 12:05:37 INFO  [SearchPage] - Hospital Rating above 3.5 : Apollo Cradle & Children’s Hospital
+2026-07-23 12:05:37 INFO  [SearchPage] - Hospital Timing : Open 24 x 7
+2026-07-23 12:05:37 INFO  [SearchPage] - Hospital Available 24x7 : Apollo Cradle & Children’s Hospital
+2026-07-23 12:05:38 INFO  [SearchPage] - Amenity Found : Parking
+2026-07-23 12:05:38 INFO  [SearchPage] - ------------------------------------------------------------
+2026-07-23 12:05:38 INFO  [SearchPage] - Hospital Found : Manipal Hospital
+2026-07-23 12:05:44 INFO  [SearchPage] - Hospital Rating : 3.5
+2026-07-23 12:05:44 INFO  [SearchPage] - Hospital Rating above 3.5 : Manipal Hospital
+2026-07-23 12:05:44 INFO  [SearchPage] - Hospital Timing : Open 24 x 7
+2026-07-23 12:05:44 INFO  [SearchPage] - Hospital Available 24x7 : Manipal Hospital
+2026-07-23 12:05:44 INFO  [SearchPage] - Amenity Found : Parking
+2026-07-23 12:05:45 INFO  [SearchPage] - ------------------------------------------------------------
+2026-07-23 12:05:45 INFO  [SearchPage] - Hospital Found : Manipal Hospital
+2026-07-23 12:05:50 INFO  [SearchPage] - Hospital Rating : 4.5
+2026-07-23 12:05:50 INFO  [SearchPage] - Hospital Rating above 3.5 : Manipal Hospital
+2026-07-23 12:05:50 INFO  [SearchPage] - Hospital Timing : Mon - Sun
+2026-07-23 12:05:51 INFO  [SearchPage] - Amenity Found : Parking
+2026-07-23 12:05:51 INFO  [SearchPage] - ------------------------------------------------------------
+2026-07-23 12:05:51 INFO  [SearchPage] - Hospital Found : Cloudnine Hospital - Old Airport Road
+2026-07-23 12:05:56 INFO  [SearchPage] - Hospital Rating : 4.5
+2026-07-23 12:05:56 INFO  [SearchPage] - Hospital Rating above 3.5 : Cloudnine Hospital - Old Airport Road
+2026-07-23 12:05:56 INFO  [SearchPage] - Hospital Timing : Open 24 x 7
+2026-07-23 12:05:56 INFO  [SearchPage] - Hospital Available 24x7 : Cloudnine Hospital - Old Airport Road
+2026-07-23 12:05:56 INFO  [SearchPage] - Amenity Found : Parking
+2026-07-23 12:05:56 INFO  [SearchPage] - ------------------------------------------------------------
+2026-07-23 12:05:57 INFO  [ConfigReader] - Property Read : excelPath = /src/main/resources/test.xlsx
+2026-07-23 12:06:05 INFO  [SearchPage] - Excel Row 1 -> Hospital: Manipal Hospital Varthur Road (formerly Columbia Asia Hospital), Rating: 4.0, Parking: Parking, Open24x7: Open 24 x 7
+2026-07-23 12:06:05 INFO  [SearchPage] - Excel Row 2 -> Hospital: Manipal Hospitals, Rating: 4.5, Parking: Parking, Open24x7: Open 24 x 7
+2026-07-23 12:06:06 INFO  [SearchPage] - Excel Row 3 -> Hospital: Koshys Hospital, Rating: 4.0, Parking: Parking, Open24x7: Open 24 x 7
+2026-07-23 12:06:06 INFO  [SearchPage] - Excel Row 4 -> Hospital: Motherhood Hospital, Rating: 4.5, Parking: Parking, Open24x7: Open 24 x 7
+2026-07-23 12:06:06 INFO  [SearchPage] - Excel Row 5 -> Hospital: Motherhood Hospital, Rating: 4.5, Parking: Parking, Open24x7: Open 24 x 7
+2026-07-23 12:06:07 INFO  [SearchPage] - Excel Row 6 -> Hospital: Sagar Hospitals, Rating: 4.0, Parking: Parking, Open24x7: Open 24 x 7
+2026-07-23 12:06:07 INFO  [SearchPage] - Excel Row 7 -> Hospital: Apollo Cradle & Children’s Hospital, Rating: 4.5, Parking: Parking, Open24x7: Open 24 x 7
+2026-07-23 12:06:08 INFO  [SearchPage] - Excel Row 8 -> Hospital: Manipal Hospital, Rating: 3.5, Parking: Parking, Open24x7: Open 24 x 7
+2026-07-23 12:06:09 INFO  [SearchPage] - Excel Row 9 -> Hospital: Cloudnine Hospital - Old Airport Road, Rating: 4.5, Parking: Parking, Open24x7: Open 24 x 7
+2026-07-23 12:06:09 INFO  [SearchPage] - Hospitals Matching Criteria : 9
+2026-07-23 12:06:09 INFO  [ScreenshotUtils] - Screenshot saved successfully : C:\Users\2505159\OneDrive - Cognizant\Desktop\FinalProject/screenshots/verifyHospitalSearch_20260723_120609.png
+2026-07-23 12:06:41 INFO  [ConfigReader] - Property Read : browser = chrome
+2026-07-23 12:06:41 INFO  [DriverFactory] - Requested Browser : chrome
+2026-07-23 12:06:41 INFO  [DriverFactory] - Launching Chrome Browser
+2026-07-23 12:06:53 INFO  [DriverFactory] - Chrome Browser Launched Successfully
+2026-07-23 12:06:53 INFO  [ConfigReader] - Property Read : url = https://www.practo.com/
+2026-07-23 12:07:00 INFO  [LabTestPage] - Opening Lab Tests Section
+2026-07-23 12:07:03 INFO  [LabTestPage] - Total Cities Found : 8
+2026-07-23 12:07:03 INFO  [LabTestPage] - City : Bangalore
+2026-07-23 12:07:05 INFO  [LabTestPage] - City : Delhi
+2026-07-23 12:07:05 INFO  [LabTestPage] - City : Mumbai
+2026-07-23 12:07:05 INFO  [LabTestPage] - City : Chennai
+2026-07-23 12:07:05 INFO  [LabTestPage] - City : Hyderabad
+2026-07-23 12:07:05 INFO  [LabTestPage] - City : Kolkata
+2026-07-23 12:07:05 INFO  [LabTestPage] - City : Pune
+2026-07-23 12:07:05 INFO  [LabTestPage] - City : Ahmedabad
+2026-07-23 12:07:05 INFO  [ScreenshotUtils] - Screenshot saved successfully : C:\Users\2505159\OneDrive - Cognizant\Desktop\FinalProject/screenshots/verifyTopCities_20260723_120705.png
+2026-07-23 12:07:18 INFO  [ConfigReader] - Property Read : browser = chrome
+2026-07-23 12:07:18 INFO  [DriverFactory] - Requested Browser : chrome
+2026-07-23 12:07:18 INFO  [DriverFactory] - Launching Chrome Browser
+2026-07-23 12:07:29 INFO  [DriverFactory] - Chrome Browser Launched Successfully
+2026-07-23 12:07:29 INFO  [ConfigReader] - Property Read : url = https://www.practo.com/
+2026-07-23 12:07:33 INFO  [ConfigReader] - Property Read : name = Mrunmayee
+2026-07-23 12:07:33 INFO  [ConfigReader] - Property Read : organization = Cognizant
+2026-07-23 12:07:33 INFO  [ConfigReader] - Property Read : contactNumber = 90876534231
+2026-07-23 12:07:33 INFO  [ConfigReader] - Property Read : emailId = xyz@gmail.
+2026-07-23 12:07:33 INFO  [CorporateWellness] - Opening Corporate Wellness Form
+2026-07-23 12:07:38 INFO  [CorporateWellness] - Entered Name : Mrunmayee
+2026-07-23 12:07:38 INFO  [CorporateWellness] - Entered Organization : Cognizant
+2026-07-23 12:07:38 INFO  [CorporateWellness] - Entered Invalid Phone Number
+2026-07-23 12:07:38 INFO  [CorporateWellness] - Entered Invalid Email Address
+2026-07-23 12:07:40 INFO  [CorporateWellness] - Selected Organization Size
+2026-07-23 12:07:40 INFO  [CorporateWellness] - Selected Taking a Demo Option
+2026-07-23 12:07:40 INFO  [CorporateWellness] - Submitting Corporate Wellness Form
+2026-07-23 12:07:40 INFO  [CorporateWellness] - Phone validation displayed
+2026-07-23 12:07:40 INFO  [CorporateWellness] - Email validation displayed
+2026-07-23 12:07:41 INFO  [ScreenshotUtils] - Screenshot saved successfully : C:\Users\2505159\OneDrive - Cognizant\Desktop\FinalProject/screenshots/validateCorporateWellnessForm_20260723_120741.png
