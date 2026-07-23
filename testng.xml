@@ -1,6 +1,10 @@
+<!-- Suite name - container for all tests -->
 <suite name="Practo Suite">
+    <!-- Test name - group of test classes -->
     <test name="Practo Tests">
+        <!-- Classes section - lists all test classes to run -->
         <classes>
+            <!-- Run all tests from PractoTest class -->
             <class name="tests.PractoTest"/>
 
         </classes>
